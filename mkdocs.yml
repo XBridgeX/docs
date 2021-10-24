@@ -14,6 +14,8 @@ nav:
         - 概述: user/xbnodejs/index.md
       - XBridge-CSharp:
         - 概述: user/xbcsharp/index.md
+        - 安装: user/xbcsharp/install.md
+        - 文件: user/xbcsharp/files.md
         - 用户命令: user/xbcsharp/user_cmd.md
         - 原生命令: user/xbcsharp/native_cmd.md
         - 正则表达式: user/xbcsharp/regex.md
