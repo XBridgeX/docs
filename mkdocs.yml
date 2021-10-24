@@ -17,6 +17,8 @@ nav:
         - 用户命令: user/xbcsharp/user_cmd.md
         - 原生命令: user/xbcsharp/native_cmd.md
         - 正则表达式: user/xbcsharp/regex.md
+      - MSB:
+        - 占位符: user/MSB/place_holder.md
     - 开发手册:
       - 安装: dev/install.md
       - 搭建开发环境: dev/enviroment.md
