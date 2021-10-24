@@ -1,0 +1,38 @@
+site_name: XBridgeX
+copyright: Copyright &copy; 2020 - 2021 XBridgeX
+nav:
+    - HOME: index.md
+    - KWO: 
+      - 概述: KWO/index.md
+      - 配置文件: KWO/config.md
+      - 数据包: KWO/pack.md
+    - LLWS:
+      - 安装: LLWS/install.md
+      - 数据包: LLWS/pack.md
+    - 用户手册:
+      - XBridge-Nodejs:
+        - 概述: user/xbnodejs/index.md
+      - XBridge-CSharp:
+        - 概述: user/xbcsharp/index.md
+        - 用户命令: user/xbcsharp/user_cmd.md
+        - 原生命令: user/xbcsharp/native_cmd.md
+        - 正则表达式: user/xbcsharp/regex.md
+    - 开发手册:
+      - 安装: dev/install.md
+      - 搭建开发环境: dev/enviroment.md
+      - 通信加密: dev/encrypt.md
+    - 关于: about.md
+theme:
+    name: material
+    language: zh
+    logo: img/ico.svg
+    favicon: img/favicon.png
+    features:
+        - search.highlight
+        - seach.suggest
+    plugins:
+      - search:
+          separator: '[\s\-\.]'
+
+extra:
+  generator: false
