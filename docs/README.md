@@ -24,4 +24,4 @@ git clone https://github.com/XBridgeX/docs.git
 
 ## 推送
 
-将size文件夹推送到xbridge.github.io仓库即可
+将site文件夹推送到xbridge.github.io仓库即可
