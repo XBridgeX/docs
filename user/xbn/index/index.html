@@ -1,0 +1,1020 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+    
+    
+      
+        <title>XBridge-N概述 - XBridgeX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#xbridge-n" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="XBridgeX" class="md-header__button md-logo" aria-label="XBridgeX" data-md-component="logo">
+      
+  <img src="../../../img/ico.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XBridgeX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              XBridge-N概述
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="XBridgeX" class="md-nav__button md-logo" aria-label="XBridgeX" data-md-component="logo">
+      
+  <img src="../../../img/ico.svg" alt="logo">
+
+    </a>
+    XBridgeX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        HOME
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          KWO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="KWO" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          KWO
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../KWO/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../KWO/config/" class="md-nav__link">
+        配置文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../KWO/pack/" class="md-nav__link">
+        数据包
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          LLWS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="LLWS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          LLWS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LLWS/install/" class="md-nav__link">
+        安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LLWS/pack/" class="md-nav__link">
+        数据包
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          用户手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="用户手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          用户手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          XBridge-N
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="XBridge-N" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          XBridge-N
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_3" type="checkbox" id="__nav_4_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_3">
+          配置指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="配置指南" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          配置指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../global_config.md" class="md-nav__link">
+        全局配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regex.md" class="md-nav__link">
+        正则表达式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobs.md" class="md-nav__link">
+        实体数据
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../players_info.md" class="md-nav__link">
+        玩家配置
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          XBridge-CSharp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="XBridge-CSharp" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          XBridge-CSharp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xbcsharp/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xbcsharp/install/" class="md-nav__link">
+        安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xbcsharp/files/" class="md-nav__link">
+        文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xbcsharp/user_cmd/" class="md-nav__link">
+        用户命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xbcsharp/native_cmd/" class="md-nav__link">
+        原生命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xbcsharp/regex/" class="md-nav__link">
+        正则表达式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          MSB
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MSB" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          MSB
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSB/place_holder/" class="md-nav__link">
+        占位符
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          开发手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="开发手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          开发手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/install/" class="md-nav__link">
+        安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/enviroment/" class="md-nav__link">
+        搭建开发环境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/encrypt/" class="md-nav__link">
+        通信加密
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="xbridge-n">XBridge-N概述</h1>
+<p><img alt="GitHub" src="https://img.shields.io/github/license/XBridgeX/XBridge-Nodejs" /> <img alt="GitHub forks" src="https://img.shields.io/github/forks/XBridgeX/XBridge-Nodejs" /> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/XBridgeX/XBridge-Nodejs?color=orange" /> <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/XBridgeX/XBridge-Nodejs/dev" /></p>
+<p><strong>XBridge-N</strong> 是XBridgeX项目下的一个MC群服互通机器人，基于<a href="https://github.com/takayama-lily/oicq">OICQ</a>机器人框架、Node.js平台进行构建。
+目前，XBridge-N已支持与以下主流的WebSocket服务端进行对接：</p>
+<table>
+<thead>
+<tr>
+<th>WebSocket服务端</th>
+<th>项目状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/XBridgeX/KWO">KWO</a></td>
+<td>活动，开发中</td>
+</tr>
+<tr>
+<td><a href="https://www.minebbs.com/resources/c-bdx-liteloader-bdswebsocketapi.2150/">LLWebSocket（原BDXWebSocket）</a></td>
+<td>活动</td>
+</tr>
+<tr>
+<td>XWebSocket</td>
+<td>停更，已转向KWO</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="xbridge-n_1">XBridge-N使用指南</h1>
+<h2 id="_1">环境要求</h2>
+<ul>
+<li>主流的操作系统平台（包括但不限于Windows、Linux、MacOS）；</li>
+<li>操作系统需要安装Node.js环境，且Node.js版本要求为14.x及以上</li>
+</ul>
+<h2 id="_2">基本操作</h2>
+<ol>
+<li>安装 <a href="https://nodejs.org/">Node.js</a>（要求Node.js版本为14.x及以上）；</li>
+<li>将本项目克隆到本地：</li>
+</ol>
+<pre><code class="language-bash">git clone https://github.com/XBridgeX/XBridge-Nodejs.git
+</code></pre>
+<ol>
+<li>进入XBridge-Nodejs目录，在该目录下打开终端，输入 <code>npm i</code> 安装依赖模块；</li>
+<li>在终端输入<code>node main.js</code>启动机器人。初次启动后会在目录下创建配置文件，并自动退出。配置文件位于<code>/config</code>目录下；</li>
+<li>根据实际情况修改好配置文件后，再次启动机器人；</li>
+<li>启动任意一个WebSocket服务端，然后启动本机器人。当控制台出现以下类似的提示时，说明机器人配置无误且运行正常：</li>
+</ol>
+<pre><code>WS服务器连接成功！
+[2021-10-21T15:54:18.496] [MARK] [iPad:123456] - 正在探索可用服务器...
+[2021-10-21T15:54:18.551] [MARK] [iPad:123456] - connecting to 109.244.168.25:8080
+[2021-10-21T15:54:18.595] [MARK] [iPad:123456] - 109.244.168.25:8080 connected
+[2021-10-21T15:54:18.973] [MARK] [iPad:123456] - Welcome, abc ! 初始化资源...
+[2021-10-21T15:54:19.205] [MARK] [iPad:123456] - 加载了1个好友，1个群，1个陌生人。
+[2021-10-21T15:54:19.349] [MARK] [iPad:123456] - 初始化完毕，开始处理消息。
+</code></pre>
+<h2 id="_3">配置文件</h2>
+<h3 id="_4">全局配置</h3>
+<p>全局配置文件为<code>/config/global_setting.json</code> ，用于保存QQ登录、WebSocket连接等相关配置信息。以下是配置示例（正式配置时，请不要在文件内写注释）：</p>
+<pre><code class="language-json">{
+    &quot;qq&quot;: 123456,   //机器人QQ账号
+    &quot;login_qrcode&quot;: true,  //是否使用扫码登录，默认为true。如使用密码登录，请改为false
+    &quot;qq_password&quot;: &quot;qqpassword&quot;,  //机器人QQ密码。仅在&quot;login_qrcode&quot;为false（使用密码登录）时，该项配置才有效
+    &quot;ws_address&quot;: &quot;ws://127.0.0.1:8080&quot;,    //Websocket服务端地址
+    &quot;ws_password&quot;: &quot;wspassword&quot;,    //WebSocket通信密钥，请与WebSocket服务端通信密钥保持一致
+    &quot;qq_group&quot;: [
+        &quot;123456&quot;   //QQ群号，目前暂时只支持一个QQ群
+    ],
+    &quot;server_name&quot;: &quot;生存服务器&quot;,  //服务器名称，目前暂时只支持一个服务器
+}
+</code></pre>
+<h3 id="_5">正则表达式</h3>
+<p>正则表达式配置文件为<code>/config/regex.json</code>，用于保存群消息自动应答规则。当玩家在群内发送消息时，如果发送的文本和正则表达式中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的功能。配置示例如下：</p>
+<pre><code class="language-json">[
+    {
+        &quot;keywords&quot;:&quot;^绑定 ([A-Za-z0-9 ]{4,20})$&quot;, //正则表达式，用于匹配群消息中的关键词
+        &quot;permission&quot;:0,     //执行动作所需权限，0为普通成员，1为管理员
+        &quot;actions&quot;:[     //关键词匹配时执行的动作，支持一个或多个
+            {
+                &quot;type&quot;:&quot;bind_whitelist&quot;,    //动作类型，见说明
+                &quot;content&quot;:&quot;白名单申请已发送，请等待管理员审核！&quot;  //动作内容，见说明
+            }
+        ]
+    }
+]
+</code></pre>
+<p>XBridge-N默认包含了默认的正则表达式配置。用户也可以对正则内容进行修改，满足各种使用需求。</p>
+<table>
+<thead>
+<tr>
+<th>keywords（关键词）</th>
+<th>permission（权限）</th>
+<th>type（动作类型）</th>
+<th>content（内容）</th>
+<th>实现功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^绑定 ([A-Za-z0-9 ]{4,20})$</td>
+<td>0</td>
+<td>bind_whitelist</td>
+<td>白名单申请已发送，请等待管理员审核！</td>
+<td>群内发送“绑定 xbx2021”，为自己绑定白名单</td>
+</tr>
+<tr>
+<td>^解绑$</td>
+<td>0</td>
+<td>unbind_whitelist</td>
+<td>解绑成功！</td>
+<td>群内发送“解绑”，为自己解绑白名单</td>
+</tr>
+<tr>
+<td>^关于我$</td>
+<td>0</td>
+<td>bind_check_self</td>
+<td>我的信息：</td>
+<td>群内发送“关于我”，查询自己的绑定状态</td>
+</tr>
+<tr>
+<td>^加白名单 (.+$)</td>
+<td>1</td>
+<td>add_whitelist</td>
+<td>已将该玩家添加到所有服务器的白名单!</td>
+<td>群内发送“加白名单 @某人”，为目标玩家添加白名单</td>
+</tr>
+<tr>
+<td>^删白名单 (.+$)</td>
+<td>1</td>
+<td>del_whitelist</td>
+<td>已将该玩家从所有服务器的白名单中移除!</td>
+<td>群内发送“删白名单 @某人”，撤销目标玩家白名单</td>
+</tr>
+<tr>
+<td>^查绑定 (.+$)</td>
+<td>1</td>
+<td>bind_check</td>
+<td>查询结果：</td>
+<td>群内发送“查绑定 @某人”，查询目标玩家的绑定状态</td>
+</tr>
+<tr>
+<td>^查服$</td>
+<td>1</td>
+<td>runcmd</td>
+<td>list</td>
+<td>群内发送“查服”，返回服务器指令“/list”的执行结果</td>
+</tr>
+<tr>
+<td>^百度$</td>
+<td>0</td>
+<td>http_get</td>
+<td>http://www.baidu.com</td>
+<td>群内发送“百度”，向“http://www.baidu.com”发起异步http_get请求</td>
+</tr>
+<tr>
+<td>^帮助$</td>
+<td>0</td>
+<td>group_message</td>
+<td>没用的帮助信息</td>
+<td>群内发送“帮助”，得到回复“没用的帮助信息”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">实体数据</h3>
+<p>实体命名配置文件为<code>./config/mobs.json</code>，用于保存实体（玩家、生物）命名。当玩家/生物被杀时，会通过该文件的内容将死亡事件转发到群内。以下是配置示例：</p>
+<pre><code class="language-json">{
+    &quot;Arrow&quot;: &quot;箭&quot;,
+    &quot;Bat&quot;: &quot;蝙蝠&quot;,
+    &quot;Bee&quot;: &quot;蜜蜂&quot;,
+    &quot;Blaze&quot;: &quot;烈焰人&quot;
+}
+</code></pre>
+<h3 id="_7">玩家配置</h3>
+<p>玩家配置文件为<code>./config/players_info.json</code>，用于保存玩家的各项信息。一般情况下无需改动。如果需要将玩家设置为机器人管理员，只需将"permission"项的值修改为1即可。以下是配置示例：</p>
+<pre><code class="language-json">[
+    {
+        &quot;name&quot;: &quot;Asurin&quot;,       //玩家昵称（Xbox ID）
+        &quot;qqid&quot;: 824907403,      //玩家QQ账号
+        &quot;permission&quot;: 0,        //玩家权限，默认为0。0为普通成员，1为管理员
+        &quot;enable&quot;: false         //绑定状态，false为已绑定、未添加白名单，true为已绑定、已添加白名单
+    }
+]
+</code></pre>
+<hr />
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 - 2021 XBridgeX
+          </div>
+        
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "seach.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      
+    
+  </body>
+</html>
