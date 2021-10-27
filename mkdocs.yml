@@ -10,8 +10,10 @@ nav:
       - 安装: LLWS/install.md
       - 数据包: LLWS/pack.md
     - 用户手册:
-      - XBridge-Nodejs:
-        - 概述: user/xbnodejs/index.md
+      - XBridge-N:
+        - 概述: user/xbn/index.md
+        - 使用指南: user/xbn/install.md
+        - 配置: user/xbn/config.md
       - XBridge-CSharp:
         - 概述: user/xbcsharp/index.md
         - 安装: user/xbcsharp/install.md
