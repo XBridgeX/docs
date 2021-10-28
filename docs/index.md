@@ -14,7 +14,7 @@ XbridgeX项目旨在让多种语言与LLWebsocket或KWO进行交互
 |--|--|--|
 |XBridge-Nodejs|基于Node的xbridge|<font color="DarkSeaGreen">长期活跃</font>|
 |XBridge-CSharp|基于C#的XBridge|<font color="DarkSeaGreen">长期活跃</font>|
-|XBridge-Python|基于Python的XBridge|<font color="DarkMagenta">半搁置状态</font>|
+|XBridge-Python|基于Python的XBridge|<font color="DarkMagenta">半搁置</font>|
 |XBridge-Lua|基于Lua的XBridge|<font color="Chocolate">搁置</font>|
 |KWO|一款轻量化的bedrock_server启动器|<font color="DarkSeaGreen">长期活跃</font>|
 
