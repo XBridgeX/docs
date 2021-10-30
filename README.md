@@ -4,6 +4,7 @@ XBridgeX文档中心页面由[mkdocs](https://mkdocs.org)生成。要维护本�
 
 * 阅读mkdocs使用文档。详见 https://mkdocs.org;
 * 熟悉Markdown语法
+* 熟悉Git的日常使用
 
 ## 文档编写
 请按照以下步骤进行操作：
