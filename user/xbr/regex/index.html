@@ -14,7 +14,7 @@
     
     
       
-        <title>用户命令 - XBridgeX</title>
+        <title>正则表达式 - XBridgeX</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#xbridger" class="md-skip">
           跳转至
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              用户命令
+              正则表达式
             
           </span>
         </div>
@@ -445,14 +445,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_2">
-          XBridge-CSharp
+          XBridgeR
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-CSharp" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeR" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-CSharp
+          XBridgeR
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -502,79 +502,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          用户命令
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../user_cmd/" class="md-nav__link">
         用户命令
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#wlxxx" class="md-nav__link">
-    wl+@xxx
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wl-xxx" class="md-nav__link">
-    wl-@xxx
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cmd" class="md-nav__link">
-    /cmd
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bind-xxxx" class="md-nav__link">
-    /bind xxxx
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unbind" class="md-nav__link">
-    /unbind
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -598,11 +530,58 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../regex/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          正则表达式
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         正则表达式
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#xb_api" class="md-nav__link">
+    XB_API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xb_placeholder" class="md-nav__link">
+    XB_Placeholder
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -785,36 +764,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wlxxx" class="md-nav__link">
-    wl+@xxx
+  <a href="#xb_api" class="md-nav__link">
+    XB_API
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#wl-xxx" class="md-nav__link">
-    wl-@xxx
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cmd" class="md-nav__link">
-    /cmd
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bind-xxxx" class="md-nav__link">
-    /bind xxxx
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unbind" class="md-nav__link">
-    /unbind
+  <a href="#xb_placeholder" class="md-nav__link">
+    XB_Placeholder
   </a>
   
 </li>
@@ -832,30 +790,161 @@
               
                 
                 
-                <h1 id="_1"><center>管理员/成员指令</center></h1>
-<p><center>以下功能只有在开启<code>xb_native</code>时才会生效</center></p>
+                <h1 id="xbridger"><center>XBridgeR</center></h1>
 <hr />
-<h2 id="wlxxx"><code>wl+@xxx</code></h2>
-<p>添加被At成员的白名单到所有服务器</p>
-<p>📌 支持At多个人</p>
-<hr />
-<h2 id="wl-xxx"><code>wl-@xxx</code></h2>
-<p>从XBridge储存的白名单数据和所有服务器中移除玩家的白名单</p>
-<p>📌支持At多个人</p>
-<hr />
-<h2 id="cmd"><code>/cmd</code></h2>
-<p>执行命令</p>
-<p><code>/cmd &lt;命令&gt;</code> - 只连接了一个服务器时，直接跟要发送的命令就可以</p>
-<p><code>/cmd &lt;服务器名称&gt; &lt;命令&gt;</code> - 连接多个服务器时，需要在第二个参数填上服务器名字，从第三个参数开始是命令</p>
-<hr />
-<h2 id="bind-xxxx"><code>/bind xxxx</code></h2>
-<p>绑定白名单</p>
-<p><code>/bind FakePlayer</code> - 把发信者的QQ号与xboxid“FakePlayer”绑定</p>
-<p>📌支持带有空格的xboxid，无需加引号</p>
-<hr />
-<h2 id="unbind"><code>/unbind</code></h2>
-<p>解绑白名单</p>
-<p>从所有服务器和XBridge白名单组件中移除发信者的白名单</p>
+<pre><code class="language-json">[
+    {
+        &quot;Regex&quot;: &quot;绑定xboxid\\s([a-zA-Z0-9\\s]{4,16})$&quot;,  //正则表达式主体
+        &quot;permission&quot;: 0,  //发言人权限等级，0为所有人，1为XBridge管理员
+        &quot;out&quot;: [
+            {
+                &quot;type&quot;: &quot;runcmdall&quot;,  //执行模式
+                &quot;text&quot;: &quot;whitelist add \&quot;$1\&quot;&quot;  //执行语句
+            },
+            {
+                &quot;type&quot;: &quot;group&quot;,
+                &quot;text&quot;: &quot;白名单：$1 已添加&quot;
+            }
+        ]
+    }
+]
+</code></pre>
+<h2 id="xb_api">XB_API</h2>
+<p>注意：部分API需要Bot有相关权限</p>
+<table>
+<thead>
+<tr>
+<th align="center">执行模式</th>
+<th align="center">行为</th>
+<th align="center">注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">runcmd</td>
+<td align="center">执行命令</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">runcmdall</td>
+<td align="center">向所有服务器发送指令</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">textall</td>
+<td align="center">向所有服务器的玩家发送信息</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">group</td>
+<td align="center">向群聊中发送讯息</td>
+<td align="center">默认向触发群聊发送</td>
+</tr>
+<tr>
+<td align="center">xb_wl_add</td>
+<td align="center">向XBridge的白名单列表添加白名单</td>
+<td align="center">text即为添加的白名单</td>
+</tr>
+<tr>
+<td align="center">xb_wl_remove</td>
+<td align="center">从XBridge的白名单列表中移除</td>
+<td align="center">默认移除发言者</td>
+</tr>
+<tr>
+<td align="center">xb_cmd</td>
+<td align="center">执行XBridge原生命令</td>
+<td align="center">执行结果默认发送到主群</td>
+</tr>
+<tr>
+<td align="center">http_get</td>
+<td align="center">发起一个异步远程HTTPGET请求</td>
+<td align="center">text即为远程地址</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xb_placeholder">XB_Placeholder</h2>
+<p>正则表达式out.text可用的占位符</p>
+<table>
+<thead>
+<tr>
+<th align="center">占位符</th>
+<th align="center">替换结果</th>
+<th align="center">注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">%xboxid%</td>
+<td align="center">发言者位于XBridge白名单所登记的xboxid</td>
+<td align="center">如果玩家没有登记记录则不会替换</td>
+</tr>
+<tr>
+<td align="center">%qqnick%</td>
+<td align="center">发言者位于群聊中的名称</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%qqid%</td>
+<td align="center">发言者QQ号</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%atid%</td>
+<td align="center">被@成员的QQ号</td>
+<td align="center">如果没有则不会替换</td>
+</tr>
+<tr>
+<td align="center">%atxboxid%</td>
+<td align="center">被@成员的xboxid</td>
+<td align="center">如果没有记录则不会替换</td>
+</tr>
+<tr>
+<td align="center">%atqqnick%</td>
+<td align="center">被@成员的名称</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%level%</td>
+<td align="center">发言者群等级</td>
+<td align="center">获取失败为0级</td>
+</tr>
+<tr>
+<td align="center">%datetime%</td>
+<td align="center">当前时间字符串</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%random%</td>
+<td align="center">一个1到100的随机数</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%COMPUTER_MEMORY_LESS%</td>
+<td align="center">计算机物理内存剩余量</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%COMPUTER_MEMORY_TOTAL%</td>
+<td align="center">计算机物理内存总量</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%COMPUTER_MEMORY_USED%</td>
+<td align="center">计算机物理内存使用量</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%COMPUTER_MEMORY_PERCENT%</td>
+<td align="center">计算机物理内存使用百分比</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%COMPUTER_CPU_PERCENT%</td>
+<td align="center">计算机CPU使用率百分比</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -875,7 +964,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../files/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 文件" rel="prev">
+        <a href="../native_cmd/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 原生命令" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -884,20 +973,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              文件
+              原生命令
             </div>
           </div>
         </a>
       
       
         
-        <a href="../native_cmd/" class="md-footer__link md-footer__link--next" aria-label="下一页: 原生命令" rel="next">
+        <a href="../../MSB/place_holder/" class="md-footer__link md-footer__link--next" aria-label="下一页: 占位符" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              原生命令
+              占位符
             </div>
           </div>
           <div class="md-footer__button md-icon">
