@@ -368,14 +368,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_1">
-          XBridge-N
+          XBridgeN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-N" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeN" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-N
+          XBridgeN
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -888,23 +888,23 @@
                 
                 <h1 id="xbridger"><center>XBridgeR</center></h1>
 <hr />
-<pre><code class="language-json">[
-    {
-        &quot;Regex&quot;: &quot;绑定xboxid\\s([a-zA-Z0-9\\s]{4,16})$&quot;,  //正则表达式主体
-        &quot;permission&quot;: 0,  //发言人权限等级，0为所有人，1为XBridge管理员
-        &quot;out&quot;: [
-            {
-                &quot;type&quot;: &quot;runcmdall&quot;,  //执行模式
-                &quot;text&quot;: &quot;whitelist add \&quot;$1\&quot;&quot;  //执行语句
-            },
-            {
-                &quot;type&quot;: &quot;group&quot;,
-                &quot;text&quot;: &quot;白名单：$1 已添加&quot;
-            }
-        ]
-    }
-]
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Regex&quot;</span><span class="p">:</span> <span class="s2">&quot;绑定xboxid\\s([a-zA-Z0-9\\s]{4,16})$&quot;</span><span class="p">,</span>  <span class="err">//正则表达式主体</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="err">//发言人权限等级，</span><span class="mi">0</span><span class="err">为所有人，</span><span class="mi">1</span><span class="err">为XBridge管理员</span>
+        <span class="nt">&quot;out&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;runcmdall&quot;</span><span class="p">,</span>  <span class="err">//执行模式</span>
+                <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;whitelist add \&quot;$1\&quot;&quot;</span>  <span class="err">//执行语句</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;group&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;白名单：$1 已添加&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
 <h2 id="xb_api">XB_API</h2>
 <p>注意：部分API需要Bot有相关权限</p>
 <table>

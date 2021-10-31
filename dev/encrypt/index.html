@@ -366,14 +366,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_1">
-          XBridge-N
+          XBridgeN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-N" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeN" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-N
+          XBridgeN
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -816,28 +816,28 @@
 </ul>
 <h2 id="_3">具体加密方法</h2>
 <p>比如现在我有一个未加密的标准包，向服务器执行list命令</p>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;action&quot;:&quot;runcmdrequest&quot;,
-    &quot;params&quot;:{
-        &quot;cmd&quot;:&quot;list&quot;,
-        &quot;id&quot;:&quot;114-514-1919-810&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="s2">&quot;runcmdrequest&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;list&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;114-514-1919-810&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>接下来我对这个数据包进行上文提到的AES加密</p>
 <p>加密后的数据包如下所示</p>
-<pre><code>ewogICAgInR5cGUiOiJwYWNrIiwKICAgICJhY3Rpb24iOiJydW5jbWRyZXF1ZXN0IiwKICAgICJwYXJhbXMiOnsKICAgICAgICAiY21kIjoibGlzdCIsCiAgICAgICAgImlkIjoiMTE0LTUxNC0xOTE5LTgxMCIKICAgIH0KfQ==
-</code></pre>
+<div class="highlight"><pre><span></span><code>ewogICAgInR5cGUiOiJwYWNrIiwKICAgICJhY3Rpb24iOiJydW5jbWRyZXF1ZXN0IiwKICAgICJwYXJhbXMiOnsKICAgICAgICAiY21kIjoibGlzdCIsCiAgICAgICAgImlkIjoiMTE0LTUxNC0xOTE5LTgxMCIKICAgIH0KfQ==
+</code></pre></div>
 <p>现在，我生成一个新包，将加密过的内容填入<code>params</code>项的<code>raw</code>中，并在<code>mode</code>中填入加密格式</p>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;encrypted&quot;,
-    &quot;params&quot;:{
-        &quot;mode&quot;:&quot;aes_cbc_pck7padding&quot;,
-        &quot;raw&quot;:&quot;ewogICAgInR5cGUiOiJwYWNrIiwKICAgICJhY3Rpb24iOiJydW5jbWRyZXF1ZXN0IiwKICAgCJwYXJhbXMiOnsK&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;encrypted&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="s2">&quot;aes_cbc_pck7padding&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;raw&quot;</span><span class="p">:</span><span class="s2">&quot;ewogICAgInR5cGUiOiJwYWNrIiwKICAgICJhY3Rpb24iOiJydW5jbWRyZXF1ZXN0IiwKICAgCJwYXJhbXMiOnsK&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>现在，一个标准的加密包就生成完毕了，您可以将它发送给KWO/LLWS。</p>
                 
               

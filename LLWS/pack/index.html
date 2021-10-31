@@ -464,14 +464,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_1">
-          XBridge-N
+          XBridgeN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-N" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeN" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-N
+          XBridgeN
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -904,92 +904,92 @@
 <p><center>通过Websocket协议与BDS服务器联动 ;)</center></p>
 <hr />
 <h2 id="_1">玩家加入(服务端发出</h2>
-<pre><code class="language-jsonc">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;: &quot;join&quot;,
-    &quot;params&quot;: {
-        &quot;sender&quot;: &quot;ExamplePlayer&quot;,
-        &quot;xuid&quot;: &quot;&quot;,
-        &quot;ip&quot;: &quot;target's ip address&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span> <span class="s2">&quot;join&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;sender&quot;</span><span class="p">:</span> <span class="s2">&quot;ExamplePlayer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;xuid&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;target&#39;s ip address&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="_2">玩家退出(服务端发出</h2>
-<pre><code class="language-jsonc">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;: &quot;left&quot;,
-    &quot;params&quot;: {
-        &quot;sender&quot;: &quot;ExamplePlayer&quot;,
-        &quot;xuid&quot;: &quot;&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;sender&quot;</span><span class="p">:</span> <span class="s2">&quot;ExamplePlayer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;xuid&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="_3">玩家使用命令(服务端发出</h2>
-<pre><code class="language-jsonc">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;: &quot;cmd&quot;,
-    &quot;params&quot;: {
-        &quot;sender&quot;: &quot;ExamplePlayer&quot;,
-        &quot;cmd&quot;: &quot;/kill @s&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span> <span class="s2">&quot;cmd&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;sender&quot;</span><span class="p">:</span> <span class="s2">&quot;ExamplePlayer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="s2">&quot;/kill @s&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="_4">玩家消息(服务端发出</h2>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;: &quot;chat&quot;,
-    &quot;params&quot;: {
-        &quot;sender&quot;: &quot;ExamplePlayer&quot;,
-        &quot;text&quot;: &quot;HelloWorld&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span> <span class="s2">&quot;chat&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;sender&quot;</span><span class="p">:</span> <span class="s2">&quot;ExamplePlayer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;HelloWorld&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="nametag">生物死亡(服务端发出(仅限有名字（NameTag）的生物(玩家)</h2>
-<pre><code class="language-json">{
-  &quot;type&quot;: &quot;pack&quot;,
-  &quot;cause&quot;: &quot;mobdie&quot;,
-  &quot;params&quot;: {
-    &quot;mobtype&quot;: &quot;entity.player.name&quot;,//实体类型
-    &quot;mobname&quot;: &quot;xxx&quot;,//实体名称
-    &quot;dmcase&quot;: 0,//伤害源ID
-    &quot;dmname&quot;: &quot;&quot;,//伤害类型
-    &quot;srctype&quot;: &quot;&quot;,//伤害源类型
-    &quot;srcname&quot;: &quot;&quot;,//伤害源名称
-    &quot;pos&quot;: {
-      &quot;x&quot;: 1072.10034,
-      &quot;y&quot;: 69.62001,
-      &quot;z&quot;: 14.9382544
-    }
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;cause&quot;</span><span class="p">:</span> <span class="s2">&quot;mobdie&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;mobtype&quot;</span><span class="p">:</span> <span class="s2">&quot;entity.player.name&quot;</span><span class="p">,</span><span class="err">//实体类型</span>
+    <span class="nt">&quot;mobname&quot;</span><span class="p">:</span> <span class="s2">&quot;xxx&quot;</span><span class="p">,</span><span class="err">//实体名称</span>
+    <span class="nt">&quot;dmcase&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="err">//伤害源ID</span>
+    <span class="nt">&quot;dmname&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span><span class="err">//伤害类型</span>
+    <span class="nt">&quot;srctype&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span><span class="err">//伤害源类型</span>
+    <span class="nt">&quot;srcname&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span><span class="err">//伤害源名称</span>
+    <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;x&quot;</span><span class="p">:</span> <span class="mf">1072.10034</span><span class="p">,</span>
+      <span class="nt">&quot;y&quot;</span><span class="p">:</span> <span class="mf">69.62001</span><span class="p">,</span>
+      <span class="nt">&quot;z&quot;</span><span class="p">:</span> <span class="mf">14.9382544</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="_5">加密包</h2>
-<pre><code class="language-jsonc">{
-    &quot;type&quot;: &quot;encrypted&quot;,
-    &quot;params&quot;: {
-        &quot;mode&quot;: &quot;aes_cbc_pck7padding&quot;,
-        &quot;raw&quot;: &quot;base64 String(from a pack json)&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;encrypted&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;aes_cbc_pck7padding&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;raw&quot;</span><span class="p">:</span> <span class="s2">&quot;base64 String(from a pack json)&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="_6">解密错误</h2>
-<pre><code class="language-jsonc">{
-    &quot;type&quot;: &quot;pack&quot;,
-    &quot;cause&quot;: &quot;decodefailed&quot;,
-    &quot;params&quot;: {
-        &quot;msg&quot;: &quot;JSON格式错误、AES解密错误... 此处返回消息不固定，只用于描述&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span> <span class="s2">&quot;decodefailed&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;JSON格式错误、AES解密错误... 此处返回消息不固定，只用于描述&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="_7">请求无效（插件端要求使用加密数据包）</h2>
-<pre><code class="language-jsonc">{
-    &quot;type&quot;: &quot;pack&quot;,
-    &quot;cause&quot;: &quot;invalidrequest&quot;,
-    &quot;params&quot;: {
-        &quot;msg&quot;: &quot;未加密的初始包不予执行！此处返回消息不固定，只用于描述&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span> <span class="s2">&quot;invalidrequest&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;未加密的初始包不予执行！此处返回消息不固定，只用于描述&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
 <h2 id="_8">加密规则</h2>
 <ul>

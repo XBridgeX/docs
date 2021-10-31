@@ -518,14 +518,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_1">
-          XBridge-N
+          XBridgeN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-N" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeN" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-N
+          XBridgeN
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1015,123 +1015,123 @@
 <hr />
 <h3 id="_2">玩家加入服务器</h3>
 <p>✌️ player join</p>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;:&quot;join&quot;,
-    &quot;params&quot;:{
-        &quot;sender&quot;:&quot;lition&quot;,
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span><span class="s2">&quot;join&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;sender&quot;</span><span class="p">:</span><span class="s2">&quot;lition&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_3">玩家离开服务器</h3>
 <p>👋 player left</p>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;:&quot;left&quot;,
-    &quot;params&quot;:{
-        &quot;sender&quot;:&quot;lition&quot;,
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;sender&quot;</span><span class="p">:</span><span class="s2">&quot;lition&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_4">玩家聊天</h3>
 <p>💬 player chat</p>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;:&quot;chat&quot;,
-    &quot;params&quot;:{
-        &quot;sender&quot;:&quot;lition&quot;,
-        &quot;text&quot;:&quot;哼哼 啊啊啊啊啊&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span><span class="s2">&quot;chat&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;sender&quot;</span><span class="p">:</span><span class="s2">&quot;lition&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;哼哼 啊啊啊啊啊&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_5">执行命令返回</h3>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;:&quot;runcmdfeedback&quot;,
-    &quot;params&quot;:{
-        &quot;result&quot;:&quot;执行命令返回&quot;,
-        &quot;id&quot;:&quot;执行时传入的id&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span><span class="s2">&quot;runcmdfeedback&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="s2">&quot;执行命令返回&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;执行时传入的id&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_6">服务器开启</h3>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;:&quot;start&quot;,
-    &quot;params&quot;:{}
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span><span class="s2">&quot;start&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_7">服务器进程退出</h3>
 <p>⚠️ 此处退出代表进程退出，如果用Bat启动程序则可能程序依旧在后台运行</p>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;:&quot;stop&quot;,
-    &quot;params&quot;:{}
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span><span class="s2">&quot;stop&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_8">直接发送文本</h3>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;:&quot;plantext&quot;,
-    &quot;params&quot;:{
-        &quot;text&quot;:&quot;哼哼 啊啊啊啊啊啊&quot;,
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span><span class="s2">&quot;plantext&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;哼哼 啊啊啊啊啊啊&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_9">调试信息</h3>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;:&quot;debug&quot;,
-    &quot;params&quot;:{
-        &quot;msg&quot;:&quot;此处返回信息不固定，作为描述使用&quot;,
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span><span class="s2">&quot;debug&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;msg&quot;</span><span class="p">:</span><span class="s2">&quot;此处返回信息不固定，作为描述使用&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_10">数据包解析失败</h3>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;cause&quot;:&quot;decodefailed&quot;,
-    &quot;params&quot;:{
-        &quot;msg&quot;:&quot;描述文本&quot;,
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cause&quot;</span><span class="p">:</span><span class="s2">&quot;decodefailed&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;msg&quot;</span><span class="p">:</span><span class="s2">&quot;描述文本&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="kwo_1"><center>📥 KWO可接收的数据包</center></h2>
 <hr />
 <h3 id="_11">向服务器发送文本消息</h3>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;action&quot;:&quot;sendtext&quot;,
-    &quot;params&quot;:{
-        &quot;text&quot;:&quot;要向服务器中发送的文本&quot;,
-        &quot;id&quot;:&quot;此项无用&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="s2">&quot;sendtext&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;要向服务器中发送的文本&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;此项无用&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_12">执行命令</h3>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;action&quot;:&quot;runcmdrequest&quot;,
-    &quot;params&quot;:{
-        &quot;cmd&quot;:&quot;要向服务器中执行的命令&quot;,
-        &quot;id&quot;:&quot;返回执行结果时需要附带执行id&quot;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="s2">&quot;runcmdrequest&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;要向服务器中执行的命令&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;返回执行结果时需要附带执行id&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_13">开启服务器</h3>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;action&quot;:&quot;start&quot;,
-    &quot;params&quot;:{}
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="s2">&quot;start&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="_14">关闭服务器</h3>
-<pre><code class="language-json">{
-    &quot;type&quot;:&quot;pack&quot;,
-    &quot;action&quot;:&quot;stop&quot;,
-    &quot;params&quot;:{}
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="s2">&quot;stop&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               

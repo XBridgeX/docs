@@ -368,14 +368,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_1">
-          XBridge-N
+          XBridgeN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-N" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeN" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-N
+          XBridgeN
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -810,17 +810,17 @@
 <h2 id="wss">WSS</h2>
 <p>XBridgeR内置了一个WEBSOCKET服务器，可以连接到XBridgeR来发送群聊信息</p>
 <p>配置文件位于<code>io.Xbridge.bds/wss/setting.json</code></p>
-<pre><code class="language-json">{
-    &quot;enable&quot;:false, //是否开启websocket服务器，默认关闭
-    &quot;port&quot;:9395,    //服务器监听端口
-    &quot;endport&quot;:&quot;/xbridge&quot;
-}
-</code></pre>
-<p>修改配置文件后重启XBridgeR</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span> <span class="err">//是否开启websocke</span><span class="kc">t</span><span class="err">服务器，默认关闭</span>
+    <span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="mi">9395</span><span class="p">,</span>    <span class="err">//服务器监听端口</span>
+    <span class="nt">&quot;endport&quot;</span><span class="p">:</span><span class="s2">&quot;/xbridge&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+修改配置文件后重启XBridgeR</p>
 <p>当在控制台出现如下字样时，代表websocket服务器开启成功</p>
 <p>测试时使用的端口为9980，实际使用时会显示您设置的端口</p>
-<pre><code>[Info] Server started at ws://0.0.0.0:9980/xbridge (actual port 9980)
-</code></pre>
+<div class="highlight"><pre><span></span><code>[Info] Server started at ws://0.0.0.0:9980/xbridge (actual port 9980)
+</code></pre></div>
 <hr />
 <h2 id="_1">通信</h2>
 <p>施工中...</p>

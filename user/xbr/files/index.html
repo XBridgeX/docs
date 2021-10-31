@@ -368,14 +368,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_1">
-          XBridge-N
+          XBridgeN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-N" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeN" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-N
+          XBridgeN
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -834,59 +834,59 @@
 <p><code>setting.json</code> - 主要配置文件，解析在下面</p>
 <hr />
 <h2 id="_2">主配置文件</h2>
-<pre><code class="language-jsonc">{
-  &quot;Servers&quot;: [ //服务器组
-    {
-      &quot;name&quot;: &quot;测试服&quot;, //服务器名称
-      &quot;Url&quot;: &quot;ws://127.0.0.1:8801/mc&quot;,  //LLWS的url
-      &quot;password&quot;: &quot;password&quot;,  //LLWS的密码
-      &quot;others&quot;:[&quot;空岛服&quot;] //位于此列表中的服务器，会接收来自它们的跨服信息
-    },
-    {
-      &quot;name&quot;: &quot;空岛服&quot;,
-      &quot;Url&quot;: &quot;ws://127.0.0.1:8800/mc&quot;,
-      &quot;password&quot;: &quot;password&quot;,
-      &quot;others&quot;:[] //留空则不会接收来自其他服务器的信息
-    }
-  ],
-  &quot;Group&quot;: {
-    &quot;main&quot;: [  //主群，用于获取白名单和执行命令
-      952680774
-    ],
-    &quot;chat&quot;: [  //聊天群，用于与服务器聊天
-      952680774
-    ]
-  },
-  &quot;Admins&quot;: [  //管理员(们)
-    2959435045
-  ],
-  &quot;enable&quot;: {
-    &quot;xb_native&quot;: true,  //是否启用xb原生功能
-    &quot;xb_regex&quot;: true,   //是否启用正则表达式
-    &quot;xb_lua&quot;: true   //是否启用lua功能
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;Servers&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="err">//服务器组</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;测试服&quot;</span><span class="p">,</span> <span class="err">//服务器名称</span>
+      <span class="nt">&quot;Url&quot;</span><span class="p">:</span> <span class="s2">&quot;ws://127.0.0.1:8801/mc&quot;</span><span class="p">,</span>  <span class="err">//LLWS的url</span>
+      <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>  <span class="err">//LLWS的密码</span>
+      <span class="nt">&quot;others&quot;</span><span class="p">:[</span><span class="s2">&quot;空岛服&quot;</span><span class="p">]</span> <span class="err">//位于此列表中的服务器，会接收来自它们的跨服信息</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;空岛服&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Url&quot;</span><span class="p">:</span> <span class="s2">&quot;ws://127.0.0.1:8800/mc&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;others&quot;</span><span class="p">:[]</span> <span class="err">//留空则不会接收来自其他服务器的信息</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;Group&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;main&quot;</span><span class="p">:</span> <span class="p">[</span>  <span class="err">//主群，用于获取白名单和执行命令</span>
+      <span class="mi">952680774</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;chat&quot;</span><span class="p">:</span> <span class="p">[</span>  <span class="err">//聊天群，用于与服务器聊天</span>
+      <span class="mi">952680774</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;Admins&quot;</span><span class="p">:</span> <span class="p">[</span>  <span class="err">//管理员(们)</span>
+    <span class="mi">2959435045</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;xb_native&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="err">//是否启用xb原生功能</span>
+    <span class="nt">&quot;xb_regex&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>   <span class="err">//是否启用正则表达式</span>
+    <span class="nt">&quot;xb_lua&quot;</span><span class="p">:</span> <span class="kc">true</span>   <span class="err">//是否启用lua功能</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
 <h2 id="_3">群聊设置文件</h2>
-<pre><code class="language-jsonc">{
-    &quot;1145141919&quot;:{  //群号
-        &quot;chatenable&quot;:true,  //是否接收玩家聊天信息转发
-        &quot;joinenable&quot;:true,  //是否接收玩家入服信息转发
-        &quot;leftenable&quot;:true,  //是否接收玩家出服信息转发
-        &quot;mobdieenable&quot;:true,  //是否接收玩家死亡信息转发
-        &quot;allowserver&quot;:[  //服务器白名单，群聊只会接收来自白名单列表服务器的信息
-            &quot;空岛服&quot;,
-            &quot;生存服&quot;
-        ],
-        &quot;errorenable&quot;:true, //错误信息是否发送到群聊，错误信息一般是ws收包解密失败或者是文件读取出错
-        &quot;chatindex&quot;:&quot;*&quot;,  //聊天转发前缀
-        &quot;chatsub&quot;:20,  //聊天截取长度
-        &quot;autowl&quot;:true   //自助白名单是否开启
-    }
-}
-</code></pre>
-<p>非必要不需要更改此文件</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;1145141919&quot;</span><span class="p">:{</span>  <span class="err">//群号</span>
+        <span class="nt">&quot;chatenable&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  <span class="err">//是否接收玩家聊天信息转发</span>
+        <span class="nt">&quot;joinenable&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  <span class="err">//是否接收玩家入服信息转发</span>
+        <span class="nt">&quot;leftenable&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  <span class="err">//是否接收玩家出服信息转发</span>
+        <span class="nt">&quot;mobdieenable&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  <span class="err">//是否接收玩家死亡信息转发</span>
+        <span class="nt">&quot;allowserver&quot;</span><span class="p">:[</span>  <span class="err">//服务器白名单，群聊只会接收来自白名单列表服务器的信息</span>
+            <span class="s2">&quot;空岛服&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;生存服&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;errorenable&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//错误信息是否发送到群聊，错误信息一般是ws收包解密失败或者是文件读取出错</span>
+        <span class="nt">&quot;chatindex&quot;</span><span class="p">:</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>  <span class="err">//聊天转发前缀</span>
+        <span class="nt">&quot;chatsub&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>  <span class="err">//聊天截取长度</span>
+        <span class="nt">&quot;autowl&quot;</span><span class="p">:</span><span class="kc">true</span>   <span class="err">//自助白名单是否开启</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+非必要不需要更改此文件</p>
 <p>使用XB原生命令可以直接更改设置</p>
 <p>详见<a href="../native_cmd/">原生命令</a></p>
                 

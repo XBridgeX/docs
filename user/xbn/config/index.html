@@ -370,14 +370,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_1">
-          XBridge-N
+          XBridgeN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-N" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeN" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-N
+          XBridgeN
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -834,34 +834,34 @@
                 
                 <h1 id="_1">配置文件</h1>
 <h2 id="_2">全局配置</h2>
-<p>全局配置文件为<code>/config/global_setting.json</code> ，用于保存QQ登录、WebSocket连接等相关配置信息。以下是配置示例（正式配置时，请不要在文件内写注释）：</p>
-<pre><code class="language-json">{
-    &quot;qq&quot;: 123456,   //机器人QQ账号
-    &quot;login_qrcode&quot;: true,  //是否使用扫码登录，默认为true。如使用密码登录，请改为false
-    &quot;qq_password&quot;: &quot;qqpassword&quot;,  //机器人QQ密码。仅在&quot;login_qrcode&quot;为false（使用密码登录）时，该项配置才有效
-    &quot;ws_address&quot;: &quot;ws://127.0.0.1:8080&quot;,    //Websocket服务端地址
-    &quot;ws_password&quot;: &quot;wspassword&quot;,    //WebSocket通信密钥，请与WebSocket服务端通信密钥保持一致
-    &quot;qq_group&quot;: [
-        &quot;123456&quot;   //QQ群号，目前暂时只支持一个QQ群
-    ],
-    &quot;server_name&quot;: &quot;生存服务器&quot;,  //服务器名称，目前暂时只支持一个服务器
-}
-</code></pre>
+<p>全局配置文件为<code>/config/global_setting.json</code> ，用于保存QQ登录、WebSocket连接等相关配置信息。以下是配置示例（正式配置时，请不要在文件内写注释）：
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;qq&quot;</span><span class="p">:</span> <span class="mi">123456</span><span class="p">,</span>   <span class="err">//机器人QQ账号</span>
+    <span class="nt">&quot;login_qrcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="err">//是否使用扫码登录，默认为</span><span class="kc">true</span><span class="err">。如使用密码登录，请改为</span><span class="kc">false</span>
+    <span class="nt">&quot;qq_password&quot;</span><span class="p">:</span> <span class="s2">&quot;qqpassword&quot;</span><span class="p">,</span>  <span class="err">//机器人QQ密码。仅在</span><span class="s2">&quot;login_qrcode&quot;</span><span class="err">为</span><span class="kc">false</span><span class="err">（使用密码登录）时，该项配置才有效</span>
+    <span class="nt">&quot;ws_address&quot;</span><span class="p">:</span> <span class="s2">&quot;ws://127.0.0.1:8080&quot;</span><span class="p">,</span>    <span class="err">//Websocke</span><span class="kc">t</span><span class="err">服务端地址</span>
+    <span class="nt">&quot;ws_password&quot;</span><span class="p">:</span> <span class="s2">&quot;wspassword&quot;</span><span class="p">,</span>    <span class="err">//WebSocke</span><span class="kc">t</span><span class="err">通信密钥，请与WebSocke</span><span class="kc">t</span><span class="err">服务端通信密钥保持一致</span>
+    <span class="nt">&quot;qq_group&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;123456&quot;</span>   <span class="err">//QQ群号，目前暂时只支持一个QQ群</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;server_name&quot;</span><span class="p">:</span> <span class="s2">&quot;生存服务器&quot;</span><span class="p">,</span>  <span class="err">//服务器名称，目前暂时只支持一个服务器</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h2 id="_3">正则表达式</h2>
-<p>正则表达式配置文件为<code>/config/regex.json</code>，用于保存群消息自动应答规则。当玩家在群内发送消息时，如果发送的文本和正则表达式中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的功能。配置示例如下：</p>
-<pre><code class="language-json">[
-    {
-        &quot;keywords&quot;:&quot;^绑定 ([A-Za-z0-9 ]{4,20})$&quot;, //正则表达式，用于匹配群消息中的关键词
-        &quot;permission&quot;:0,     //执行动作所需权限，0为普通成员，1为管理员
-        &quot;actions&quot;:[     //关键词匹配时执行的动作，支持一个或多个
-            {
-                &quot;type&quot;:&quot;bind_whitelist&quot;,    //动作类型，见说明
-                &quot;content&quot;:&quot;白名单申请已发送，请等待管理员审核！&quot;  //动作内容，见说明
-            }
-        ]
-    }
-]
-</code></pre>
+<p>正则表达式配置文件为<code>/config/regex.json</code>，用于保存群消息自动应答规则。当玩家在群内发送消息时，如果发送的文本和正则表达式中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的功能。配置示例如下：
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;keywords&quot;</span><span class="p">:</span><span class="s2">&quot;^绑定 ([A-Za-z0-9 ]{4,20})$&quot;</span><span class="p">,</span> <span class="err">//正则表达式，用于匹配群消息中的关键词</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>     <span class="err">//执行动作所需权限，</span><span class="mi">0</span><span class="err">为普通成员，</span><span class="mi">1</span><span class="err">为管理员</span>
+        <span class="nt">&quot;actions&quot;</span><span class="p">:[</span>     <span class="err">//关键词匹配时执行的动作，支持一个或多个</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;bind_whitelist&quot;</span><span class="p">,</span>    <span class="err">//动作类型，见说明</span>
+                <span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="s2">&quot;白名单申请已发送，请等待管理员审核！&quot;</span>  <span class="err">//动作内容，见说明</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></p>
 <p>XBridge-N默认包含了默认的正则表达式配置。用户也可以对正则内容进行修改，满足各种使用需求。</p>
 <table>
 <thead>
@@ -940,25 +940,25 @@
 </tbody>
 </table>
 <h2 id="_4">实体数据</h2>
-<p>实体命名配置文件为<code>./config/mobs.json</code>，用于保存实体（玩家、生物）命名。当玩家/生物被杀时，会通过该文件的内容将死亡事件转发到群内。以下是配置示例：</p>
-<pre><code class="language-json">{
-    &quot;Arrow&quot;: &quot;箭&quot;,
-    &quot;Bat&quot;: &quot;蝙蝠&quot;,
-    &quot;Bee&quot;: &quot;蜜蜂&quot;,
-    &quot;Blaze&quot;: &quot;烈焰人&quot;
-}
-</code></pre>
+<p>实体命名配置文件为<code>./config/mobs.json</code>，用于保存实体（玩家、生物）命名。当玩家/生物被杀时，会通过该文件的内容将死亡事件转发到群内。以下是配置示例：
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;Arrow&quot;</span><span class="p">:</span> <span class="s2">&quot;箭&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Bat&quot;</span><span class="p">:</span> <span class="s2">&quot;蝙蝠&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Bee&quot;</span><span class="p">:</span> <span class="s2">&quot;蜜蜂&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Blaze&quot;</span><span class="p">:</span> <span class="s2">&quot;烈焰人&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h2 id="_5">玩家配置</h2>
-<p>玩家配置文件为<code>./config/players_info.json</code>，用于保存玩家的各项信息。一般情况下无需改动。如果需要将玩家设置为机器人管理员，只需将"permission"项的值修改为1即可。以下是配置示例：</p>
-<pre><code class="language-json">[
-    {
-        &quot;name&quot;: &quot;Asurin&quot;,       //玩家昵称（Xbox ID）
-        &quot;qqid&quot;: 824907403,      //玩家QQ账号
-        &quot;permission&quot;: 0,        //玩家权限，默认为0。0为普通成员，1为管理员
-        &quot;enable&quot;: false         //绑定状态，false为已绑定、未添加白名单，true为已绑定、已添加白名单
-    }
-]
-</code></pre>
+<p>玩家配置文件为<code>./config/players_info.json</code>，用于保存玩家的各项信息。一般情况下无需改动。如果需要将玩家设置为机器人管理员，只需将"permission"项的值修改为1即可。以下是配置示例：
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Asurin&quot;</span><span class="p">,</span>       <span class="err">//玩家昵称（Xbox</span> <span class="err">ID）</span>
+        <span class="nt">&quot;qqid&quot;</span><span class="p">:</span> <span class="mi">824907403</span><span class="p">,</span>      <span class="err">//玩家QQ账号</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>        <span class="err">//玩家权限，默认为</span><span class="mi">0</span><span class="err">。</span><span class="mi">0</span><span class="err">为普通成员，</span><span class="mi">1</span><span class="err">为管理员</span>
+        <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">false</span>         <span class="err">//绑定状态，</span><span class="kc">false</span><span class="err">为已绑定、未添加白名单，</span><span class="kc">true</span><span class="err">为已绑定、已添加白名单</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></p>
                 
               
               
