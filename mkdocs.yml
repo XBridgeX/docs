@@ -12,8 +12,9 @@ nav:
     - 用户手册:
       - XBridgeN:
         - 概述: user/xbn/index.md
-        - 使用指南: user/xbn/install.md
-        - 配置: user/xbn/config.md
+        - 开始使用: user/xbn/start.md
+        - 一般配置: user/xbn/config.md
+        - 高级配置: user/xbn/regex.md
       - XBridgeR:
         - 概述: user/xbr/index.md
         - 安装: user/xbr/install.md
