@@ -10,15 +10,15 @@
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
     
     
       
-        <title>用户命令 - XBridgeX</title>
+        <title>文件 - XBridgeX</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#xbridger" class="md-skip">
           跳转至
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              用户命令
+              文件
             
           </span>
         </div>
@@ -445,14 +445,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_2">
-          XBridge-CSharp
+          XBridgeR
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-CSharp" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeR" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-CSharp
+          XBridgeR
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -488,20 +488,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../files/" class="md-nav__link">
-        文件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -514,12 +500,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          用户命令
+          文件
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        用户命令
+        文件
       </a>
       
         
@@ -537,36 +523,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wlxxx" class="md-nav__link">
-    wl+@xxx
+  <a href="#_1" class="md-nav__link">
+    文件
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#wl-xxx" class="md-nav__link">
-    wl-@xxx
+  <a href="#_2" class="md-nav__link">
+    主配置文件
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cmd" class="md-nav__link">
-    /cmd
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bind-xxxx" class="md-nav__link">
-    /bind xxxx
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unbind" class="md-nav__link">
-    /unbind
+  <a href="#_3" class="md-nav__link">
+    群聊设置文件
   </a>
   
 </li>
@@ -575,6 +547,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_cmd/" class="md-nav__link">
+        用户命令
+      </a>
     </li>
   
 
@@ -602,6 +588,20 @@
     <li class="md-nav__item">
       <a href="../regex/" class="md-nav__link">
         正则表达式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wss/" class="md-nav__link">
+        websocket开发
       </a>
     </li>
   
@@ -785,36 +785,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wlxxx" class="md-nav__link">
-    wl+@xxx
+  <a href="#_1" class="md-nav__link">
+    文件
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#wl-xxx" class="md-nav__link">
-    wl-@xxx
+  <a href="#_2" class="md-nav__link">
+    主配置文件
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cmd" class="md-nav__link">
-    /cmd
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bind-xxxx" class="md-nav__link">
-    /bind xxxx
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unbind" class="md-nav__link">
-    /unbind
+  <a href="#_3" class="md-nav__link">
+    群聊设置文件
   </a>
   
 </li>
@@ -832,30 +818,77 @@
               
                 
                 
-                <h1 id="_1"><center>管理员/成员指令</center></h1>
-<p><center>以下功能只有在开启<code>xb_native</code>时才会生效</center></p>
+                <h1 id="xbridger"><center>XBridgeR</center></h1>
+<p><center>与基岩版MC服务器的QQ远控</center></p>
 <hr />
-<h2 id="wlxxx"><code>wl+@xxx</code></h2>
-<p>添加被At成员的白名单到所有服务器</p>
-<p>📌 支持At多个人</p>
+<h2 id="_1">文件</h2>
+<p>配置文件位于<code>MiraiNative/data/io.XBridge.bds</code></p>
+<p><code>/wss/</code> - WebsocketServer文件夹</p>
+<p><code>/logs/</code> - 运行日志</p>
+<p><code>.lang</code> - XBridge的语言文件</p>
+<p><code>die_id.json</code> - 由玩家自身原因死亡的消息文件</p>
+<p><code>mobs.json</code> - 生物命名表</p>
+<p><code>playerdata.xdb</code> - 储存白名单，统计数据</p>
+<p><code>GroupData.json</code> - 群聊设置文件</p>
+<p><code>Regex.json</code> - 开启正则功能后会生成这个文件，可以自定义正则表达式</p>
+<p><code>setting.json</code> - 主要配置文件，解析在下面</p>
 <hr />
-<h2 id="wl-xxx"><code>wl-@xxx</code></h2>
-<p>从XBridge储存的白名单数据和所有服务器中移除玩家的白名单</p>
-<p>📌支持At多个人</p>
+<h2 id="_2">主配置文件</h2>
+<pre><code class="language-jsonc">{
+  &quot;Servers&quot;: [ //服务器组
+    {
+      &quot;name&quot;: &quot;测试服&quot;, //服务器名称
+      &quot;Url&quot;: &quot;ws://127.0.0.1:8801/mc&quot;,  //LLWS的url
+      &quot;password&quot;: &quot;password&quot;,  //LLWS的密码
+      &quot;others&quot;:[&quot;空岛服&quot;] //位于此列表中的服务器，会接收来自它们的跨服信息
+    },
+    {
+      &quot;name&quot;: &quot;空岛服&quot;,
+      &quot;Url&quot;: &quot;ws://127.0.0.1:8800/mc&quot;,
+      &quot;password&quot;: &quot;password&quot;,
+      &quot;others&quot;:[] //留空则不会接收来自其他服务器的信息
+    }
+  ],
+  &quot;Group&quot;: {
+    &quot;main&quot;: [  //主群，用于获取白名单和执行命令
+      952680774
+    ],
+    &quot;chat&quot;: [  //聊天群，用于与服务器聊天
+      952680774
+    ]
+  },
+  &quot;Admins&quot;: [  //管理员(们)
+    2959435045
+  ],
+  &quot;enable&quot;: {
+    &quot;xb_native&quot;: true,  //是否启用xb原生功能
+    &quot;xb_regex&quot;: true,   //是否启用正则表达式
+    &quot;xb_lua&quot;: true   //是否启用lua功能
+  }
+}
+</code></pre>
 <hr />
-<h2 id="cmd"><code>/cmd</code></h2>
-<p>执行命令</p>
-<p><code>/cmd &lt;命令&gt;</code> - 只连接了一个服务器时，直接跟要发送的命令就可以</p>
-<p><code>/cmd &lt;服务器名称&gt; &lt;命令&gt;</code> - 连接多个服务器时，需要在第二个参数填上服务器名字，从第三个参数开始是命令</p>
-<hr />
-<h2 id="bind-xxxx"><code>/bind xxxx</code></h2>
-<p>绑定白名单</p>
-<p><code>/bind FakePlayer</code> - 把发信者的QQ号与xboxid“FakePlayer”绑定</p>
-<p>📌支持带有空格的xboxid，无需加引号</p>
-<hr />
-<h2 id="unbind"><code>/unbind</code></h2>
-<p>解绑白名单</p>
-<p>从所有服务器和XBridge白名单组件中移除发信者的白名单</p>
+<h2 id="_3">群聊设置文件</h2>
+<pre><code class="language-jsonc">{
+    &quot;1145141919&quot;:{  //群号
+        &quot;chatenable&quot;:true,  //是否接收玩家聊天信息转发
+        &quot;joinenable&quot;:true,  //是否接收玩家入服信息转发
+        &quot;leftenable&quot;:true,  //是否接收玩家出服信息转发
+        &quot;mobdieenable&quot;:true,  //是否接收玩家死亡信息转发
+        &quot;allowserver&quot;:[  //服务器白名单，群聊只会接收来自白名单列表服务器的信息
+            &quot;空岛服&quot;,
+            &quot;生存服&quot;
+        ],
+        &quot;errorenable&quot;:true, //错误信息是否发送到群聊，错误信息一般是ws收包解密失败或者是文件读取出错
+        &quot;chatindex&quot;:&quot;*&quot;,  //聊天转发前缀
+        &quot;chatsub&quot;:20,  //聊天截取长度
+        &quot;autowl&quot;:true   //自助白名单是否开启
+    }
+}
+</code></pre>
+<p>非必要不需要更改此文件</p>
+<p>使用XB原生命令可以直接更改设置</p>
+<p>详见<a href="../native_cmd/">原生命令</a></p>
                 
               
               
@@ -875,7 +908,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../files/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 文件" rel="prev">
+        <a href="../install/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 安装" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -884,20 +917,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              文件
+              安装
             </div>
           </div>
         </a>
       
       
         
-        <a href="../native_cmd/" class="md-footer__link md-footer__link--next" aria-label="下一页: 原生命令" rel="next">
+        <a href="../user_cmd/" class="md-footer__link md-footer__link--next" aria-label="下一页: 用户命令" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              原生命令
+              用户命令
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -930,7 +963,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "seach.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
       
     
   </body>

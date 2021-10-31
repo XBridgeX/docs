@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#xbridgen" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -448,28 +448,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     全局配置
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     正则表达式
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     实体数据
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     玩家配置
   </a>
   
@@ -506,14 +506,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_2">
-          XBridge-CSharp
+          XBridgeR
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-CSharp" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeR" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-CSharp
+          XBridgeR
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -523,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xbcsharp/" class="md-nav__link">
+      <a href="../../xbr/" class="md-nav__link">
         概述
       </a>
     </li>
@@ -537,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xbcsharp/install/" class="md-nav__link">
+      <a href="../../xbr/install/" class="md-nav__link">
         安装
       </a>
     </li>
@@ -551,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xbcsharp/files/" class="md-nav__link">
+      <a href="../../xbr/files/" class="md-nav__link">
         文件
       </a>
     </li>
@@ -565,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xbcsharp/user_cmd/" class="md-nav__link">
+      <a href="../../xbr/user_cmd/" class="md-nav__link">
         用户命令
       </a>
     </li>
@@ -579,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xbcsharp/native_cmd/" class="md-nav__link">
+      <a href="../../xbr/native_cmd/" class="md-nav__link">
         原生命令
       </a>
     </li>
@@ -593,8 +593,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xbcsharp/regex/" class="md-nav__link">
+      <a href="../../xbr/regex/" class="md-nav__link">
         正则表达式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xbr/wss/" class="md-nav__link">
+        websocket开发
       </a>
     </li>
   
@@ -778,28 +792,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     全局配置
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     正则表达式
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     实体数据
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     玩家配置
   </a>
   
@@ -818,8 +832,8 @@
               
                 
                 
-                <h1 id="xbridgen">XBridgeN：配置</h1>
-<h2 id="_1">全局配置</h2>
+                <h1 id="_1">配置文件</h1>
+<h2 id="_2">全局配置</h2>
 <p>全局配置文件为<code>/config/global_setting.json</code> ，用于保存QQ登录、WebSocket连接等相关配置信息。以下是配置示例（正式配置时，请不要在文件内写注释）：</p>
 <pre><code class="language-json">{
     &quot;qq&quot;: 123456,   //机器人QQ账号
@@ -833,7 +847,7 @@
     &quot;server_name&quot;: &quot;生存服务器&quot;,  //服务器名称，目前暂时只支持一个服务器
 }
 </code></pre>
-<h2 id="_2">正则表达式</h2>
+<h2 id="_3">正则表达式</h2>
 <p>正则表达式配置文件为<code>/config/regex.json</code>，用于保存群消息自动应答规则。当玩家在群内发送消息时，如果发送的文本和正则表达式中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的功能。配置示例如下：</p>
 <pre><code class="language-json">[
     {
@@ -848,7 +862,7 @@
     }
 ]
 </code></pre>
-<p>XBridgeN默认包含了默认的正则表达式配置。用户也可以对正则内容进行修改，满足各种使用需求。</p>
+<p>XBridge-N默认包含了默认的正则表达式配置。用户也可以对正则内容进行修改，满足各种使用需求。</p>
 <table>
 <thead>
 <tr>
@@ -925,7 +939,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_3">实体数据</h2>
+<h2 id="_4">实体数据</h2>
 <p>实体命名配置文件为<code>./config/mobs.json</code>，用于保存实体（玩家、生物）命名。当玩家/生物被杀时，会通过该文件的内容将死亡事件转发到群内。以下是配置示例：</p>
 <pre><code class="language-json">{
     &quot;Arrow&quot;: &quot;箭&quot;,
@@ -934,7 +948,7 @@
     &quot;Blaze&quot;: &quot;烈焰人&quot;
 }
 </code></pre>
-<h2 id="_4">玩家配置</h2>
+<h2 id="_5">玩家配置</h2>
 <p>玩家配置文件为<code>./config/players_info.json</code>，用于保存玩家的各项信息。一般情况下无需改动。如果需要将玩家设置为机器人管理员，只需将"permission"项的值修改为1即可。以下是配置示例：</p>
 <pre><code class="language-json">[
     {
@@ -980,7 +994,7 @@
       
       
         
-        <a href="../../xbcsharp/" class="md-footer__link md-footer__link--next" aria-label="下一页: 概述" rel="next">
+        <a href="../../xbr/" class="md-footer__link md-footer__link--next" aria-label="下一页: 概述" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1019,7 +1033,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "seach.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
       
     
   </body>

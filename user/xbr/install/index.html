@@ -10,15 +10,15 @@
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
     
     
       
-        <title>正则表达式 - XBridgeX</title>
+        <title>安装 - XBridgeX</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#xbridger" class="md-skip">
           跳转至
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              正则表达式
+              安装
             
           </span>
         </div>
@@ -445,14 +445,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_2">
-          XBridge-CSharp
+          XBridgeR
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="XBridge-CSharp" data-md-level="2">
+      <nav class="md-nav" aria-label="XBridgeR" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
-          XBridge-CSharp
+          XBridgeR
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -474,11 +474,51 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          安装
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         安装
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    装载
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -530,58 +570,25 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          正则表达式
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../regex/" class="md-nav__link">
         正则表达式
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#xb_api" class="md-nav__link">
-    XB_API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xb_placeholder" class="md-nav__link">
-    XB_Placeholder
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+    <li class="md-nav__item">
+      <a href="../wss/" class="md-nav__link">
+        websocket开发
+      </a>
     </li>
   
 
@@ -764,15 +771,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#xb_api" class="md-nav__link">
-    XB_API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xb_placeholder" class="md-nav__link">
-    XB_Placeholder
+  <a href="#_1" class="md-nav__link">
+    装载
   </a>
   
 </li>
@@ -790,161 +790,22 @@
               
                 
                 
-                <h1 id="_1"><center>正则表达式</center></h1>
+                <h1 id="xbridger"><center>XBridgeR</center></h1>
+<p><center>与基岩版MC服务器的QQ远控</center></p>
 <hr />
-<pre><code class="language-json">[
-    {
-        &quot;Regex&quot;: &quot;绑定xboxid\\s([a-zA-Z0-9\\s]{4,16})$&quot;,  //正则表达式主体
-        &quot;permission&quot;: 0,  //发言人权限等级，0为所有人，1为XBridge管理员
-        &quot;out&quot;: [
-            {
-                &quot;type&quot;: &quot;runcmdall&quot;,  //执行模式
-                &quot;text&quot;: &quot;whitelist add \&quot;$1\&quot;&quot;  //执行语句
-            },
-            {
-                &quot;type&quot;: &quot;group&quot;,
-                &quot;text&quot;: &quot;白名单：$1 已添加&quot;
-            }
-        ]
-    }
-]
-</code></pre>
-<h2 id="xb_api">XB_API</h2>
-<p>注意：部分API需要Bot有相关权限</p>
-<table>
-<thead>
-<tr>
-<th align="center">执行模式</th>
-<th align="center">行为</th>
-<th align="center">注意</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">runcmd</td>
-<td align="center">执行命令</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">runcmdall</td>
-<td align="center">向所有服务器发送指令</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">textall</td>
-<td align="center">向所有服务器的玩家发送信息</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">group</td>
-<td align="center">向群聊中发送讯息</td>
-<td align="center">默认向触发群聊发送</td>
-</tr>
-<tr>
-<td align="center">xb_wl_add</td>
-<td align="center">向XBridge的白名单列表添加白名单</td>
-<td align="center">text即为添加的白名单</td>
-</tr>
-<tr>
-<td align="center">xb_wl_remove</td>
-<td align="center">从XBridge的白名单列表中移除</td>
-<td align="center">默认移除发言者</td>
-</tr>
-<tr>
-<td align="center">xb_cmd</td>
-<td align="center">执行XBridge原生命令</td>
-<td align="center">执行结果默认发送到主群</td>
-</tr>
-<tr>
-<td align="center">http_get</td>
-<td align="center">发起一个异步远程HTTPGET请求</td>
-<td align="center">text即为远程地址</td>
-</tr>
-</tbody>
-</table>
-<h2 id="xb_placeholder">XB_Placeholder</h2>
-<p>正则表达式out.text可用的占位符</p>
-<table>
-<thead>
-<tr>
-<th align="center">占位符</th>
-<th align="center">替换结果</th>
-<th align="center">注意</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">%xboxid%</td>
-<td align="center">发言者位于XBridge白名单所登记的xboxid</td>
-<td align="center">如果玩家没有登记记录则不会替换</td>
-</tr>
-<tr>
-<td align="center">%qqnick%</td>
-<td align="center">发言者位于群聊中的名称</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%qqid%</td>
-<td align="center">发言者QQ号</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%atid%</td>
-<td align="center">被@成员的QQ号</td>
-<td align="center">如果没有则不会替换</td>
-</tr>
-<tr>
-<td align="center">%atxboxid%</td>
-<td align="center">被@成员的xboxid</td>
-<td align="center">如果没有记录则不会替换</td>
-</tr>
-<tr>
-<td align="center">%atqqnick%</td>
-<td align="center">被@成员的名称</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%level%</td>
-<td align="center">发言者群等级</td>
-<td align="center">获取失败为0级</td>
-</tr>
-<tr>
-<td align="center">%datetime%</td>
-<td align="center">当前时间字符串</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%random%</td>
-<td align="center">一个1到100的随机数</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%COMPUTER_MEMORY_LESS%</td>
-<td align="center">计算机物理内存剩余量</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%COMPUTER_MEMORY_TOTAL%</td>
-<td align="center">计算机物理内存总量</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%COMPUTER_MEMORY_USED%</td>
-<td align="center">计算机物理内存使用量</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%COMPUTER_MEMORY_PERCENT%</td>
-<td align="center">计算机物理内存使用百分比</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">%COMPUTER_CPU_PERCENT%</td>
-<td align="center">计算机CPU使用率百分比</td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
+<h2 id="_1">装载</h2>
+<p>1.下载XBridge</p>
+<p>可以在<a href="https://www.minebbs.com/resources/xbridge.2761/">minebbs</a>或者<a href="https://jq.qq.com/?_wv=1027&amp;k=rmCKLG7M">XBX官方QQ群</a>中下载文件</p>
+<p>下载后解压，如图所示</p>
+<p><img alt="" src="../../../img/xbcsharp_install_1.png" /></p>
+<p>注：编写此页面时最新版本为1.2.3.5v3，实际装载时版本可能会随时间推移而改变</p>
+<p>2.下载Mirai</p>
+<p>可以在<a href="https://jq.qq.com/?_wv=1027&amp;k=rmCKLG7M">XBX官方QQ群</a>中下载文件</p>
+<p>下载后解压，如图所示</p>
+<p><img alt="" src="../../../img/xbcsharp_install_2.png" /></p>
+<p>把步骤一解压出来的dll和json放进<code>data/MiraiNative/plugins</code>中</p>
+<p>注：如果找不到文件夹请先登陆一次</p>
+<p>然后就是更改配置文件了，详见<a href="../files/">文件</a>页面</p>
                 
               
               
@@ -964,7 +825,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../native_cmd/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 原生命令" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 概述" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -973,20 +834,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              原生命令
+              概述
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../MSB/place_holder/" class="md-footer__link md-footer__link--next" aria-label="下一页: 占位符" rel="next">
+        <a href="../files/" class="md-footer__link md-footer__link--next" aria-label="下一页: 文件" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              占位符
+              文件
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1019,7 +880,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "seach.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
       
     
   </body>
