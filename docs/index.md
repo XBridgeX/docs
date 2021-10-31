@@ -12,7 +12,7 @@ XbridgeX项目旨在让多种语言与LLWebsocket或KWO进行交互
 
 |项目|描述|状态|
 |--|--|--|
-|XBridge-Nodejs|基于Node的xbridge|<font color="DarkSeaGreen">长期活跃</font>|
+|XBridge-Nodejs|基于Node.js的XBridge|<font color="DarkSeaGreen">长期活跃</font>|
 |XBridge-CSharp|基于C#的XBridge|<font color="DarkSeaGreen">长期活跃</font>|
 |XBridge-Python|基于Python的XBridge|<font color="DarkMagenta">半搁置</font>|
 |XBridge-Lua|基于Lua的XBridge|<font color="Chocolate">搁置</font>|
@@ -25,6 +25,6 @@ XbridgeX项目旨在让多种语言与LLWebsocket或KWO进行交互
 
 - [LLWS文档](./LLWS/pack.md)
 
-- Xbridge子项目文档(编写中)
+- XBridge子项目文档(编写中)
 
 - [关于](./about.md)
