@@ -1,6 +1,6 @@
 # <center>XBridgeR</center>
 
-<center>与基岩版MC服务器的QQ远控</center>
+<center>websocket开发</center>
 
 ***
 
@@ -31,4 +31,41 @@ XBridgeR内置了一个WEBSOCKET服务器，可以连接到XBridgeR来发送群�
 
 ## 通信
 
-施工中...
+### <center>消息包</center>
+
+wss在发送群内收到的信息时，会把信息解析为消息包，如下是一个标准的消息包
+
+```json
+{
+    "from":{
+        "member":114514,  //发信者QQ号
+        "xboxid":null,   //发信者XBOXID，没有记录为Null
+        "group":1919810  //来源群
+    },
+    "messageChain":[
+        {"type":"PlanText","text":"？"},  //纯文本
+        {"type":"At","target":12345678},  //At某人
+        {"type":"Image"},  //图片
+        {"type":"AtAll"},   //At全体成员
+        {"type":"Face","id":12} //小表情
+    ]
+}
+```
+
+***
+
+### <center>发信息</center>
+
+通过数据包同样可以发送信息到群聊
+
+```json
+{
+    "action":"send",
+    "params":{
+        "target":114514,
+        "text":"你好"
+    }
+}
+```
+
+这个包会向114514群聊发送你好

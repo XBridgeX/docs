@@ -18,7 +18,7 @@
 
 然后进入`plugins/liteloader/websocket/config.json`中修改端口和密匙
 
-``` jsonc
+``` json
 {
 	"wsaddr":"0.0.0.0:8123",  //websocket服务器地址
 	"endpoint":"/mc",   //websocket服务器endport

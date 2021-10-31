@@ -1,25 +1,39 @@
 # <center>XBridgeR</center>
+<center>正则表达式</center>
+***
+
+使用正则表达式可以让您更方便，更直接的使用XBridgeR
+
+例如可以查询服务器占用情况
+
+![](../../img/xbr/regex_1.png)
+
+更多用法等待您的探索
 
 ***
+
+## 正则主体
+
+XBridgeR的正则表达式文件是一条正则表达式链，内有多个正则成员
+
+一个标准的正则成员应该包括`Regex`,`permission`和`out`
 
 ``` json
 [
 	{
-		"Regex": "绑定xboxid\\s([a-zA-Z0-9\\s]{4,16})$",  //正则表达式主体
-		"permission": 0,  //发言人权限等级，0为所有人，1为XBridge管理员
+		"Regex": "^服务器占用$",  //正则表达式主体
+		"permission": 0, //执行权限，0为所有人，1为XBridgeR管理员
 		"out": [
 			{
-				"type": "runcmdall",  //执行模式
-				"text": "whitelist add \"$1\""  //执行语句
-			},
-			{
-				"type": "group",
-				"text": "白名单：$1 已添加"
+				"type": "group",  //执行模式，即下文的XB_API
+				"text": "CPU：%COMPUTER_CPU_PERCENT%%\n内存：%COMPUTER_RAM_USED%G/%COMPUTER_RAM_TOTAL%G（%COMPUTER_RAM_PERCENT%%）"
 			}
 		]
 	}
 ]
 ```
+
+***
 
 ## XB_API
 

@@ -1,6 +1,6 @@
 # <center>XBridgeR</center>
 
-<center>与基岩版MC服务器的QQ远控</center>
+<center>文件</center>
 
 ***
 
@@ -60,8 +60,8 @@
   ],
   "enable": {
     "xb_native": true,  //是否启用xb原生功能
-    "xb_regex": true,   //是否启用正则表达式
-    "xb_lua": true   //是否启用lua功能
+    "xb_regex": false,   //是否启用正则表达式
+    "xb_lua": false  //是否启用lua功能
   }
 }
 ```

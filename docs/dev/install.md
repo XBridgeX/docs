@@ -2,7 +2,7 @@
 
 ***
 
-XBridgeX现有三个子项目，其中[Python](https://github.com/XBridgeX/XBridge-Python)版和[JavaScript](https://github.com/XBridgeX/XBridge-Nodejs.git)版已经开发适配了机器人框架
+XBridgeX现有三个子项目，其中[Lua](https://github.com/XBridgeX/XBridge-Lua)版和[JavaScript](https://github.com/XBridgeX/XBridge-Nodejs.git)版已经开发适配了机器人框架
 
 如果您想自己开发，也是一个不错的选择
 
@@ -20,5 +20,10 @@ git clone https://github.com/XBridgeX/XBridge-Nodejs.git
 
 ## 使用Lua开发
 
-直接下载项目[Release](https://github.com/XBridgeX/XBridge-Lua/releases)
+先clone项目
+```
+https://github.com/XBridgeX/XBridge-Lua.git
+```
+然后进入XBridgeA文件夹运行build.bat进行本地构建
 
+构建完成后项目会生成在`XBridgeA\bin\Debug\net5.0\win-x64\publish`文件夹

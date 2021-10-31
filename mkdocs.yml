@@ -22,6 +22,7 @@ nav:
         - 原生命令: user/xbr/native_cmd.md
         - 正则表达式: user/xbr/regex.md
         - websocket开发: user/xbr/wss.md
+        - 常见问题: user/xbr/QandA.md
       - MSB:
         - 占位符: user/MSB/place_holder.md
     - 开发手册:

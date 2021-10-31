@@ -33,4 +33,4 @@ npm i
 
 所有Lua使用的api均由NeoLua库注册到Lua虚拟机中
 
-理论上您只需要.NET Formwork4.7.2环境即可运行
+理论上您只需要.NET5环境即可运行

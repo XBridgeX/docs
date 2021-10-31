@@ -1,10 +1,12 @@
 # <center>XBridgeR</center>
 
-<center>与基岩版MC服务器的QQ远控</center>
+<center>安装</center>
 
 ***
 
 ## 装载
+
+⚠️ 装载XBridgeR之前，请确保您装载了LLwebsoket，若未装载请您移步[装载LLWS](../../LLWS/install.md)
 
 1.下载XBridge
 
@@ -12,7 +14,7 @@
 
 下载后解压，如图所示
 
-![](../../img/xbcsharp_install_1.png)
+![](../../img/xbr/install_1.png)
 
 注：编写此页面时最新版本为1.2.3.5v3，实际装载时版本可能会随时间推移而改变
 
@@ -22,7 +24,7 @@
 
 下载后解压，如图所示
 
-![](../../img/xbcsharp_install_2.png)
+![](../../img/xbr/install_2.png)
 
 把步骤一解压出来的dll和json放进`data/MiraiNative/plugins`中
 

@@ -3,6 +3,8 @@
 <center>与基岩版MC服务器的QQ远控</center>
 
 ***
+> XBridgeR，即原XBridge。
+
 
 ## 使用
  - [安装](./install.md)
