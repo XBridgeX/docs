@@ -9,3 +9,7 @@ WebSocket服务端|项目状态
 [KWO](https://github.com/XBridgeX/KWO)|活动，开发中
 [LLWebSocket（原BDXWebSocket）](https://www.minebbs.com/resources/c-bdx-liteloader-bdswebsocketapi.2150/)|活动
 XWebSocket|停更，已转向KWO
+
+<br><br><br><br>**阅读本文档，您将能够：**
+* 掌握XBridgeN的基本使用
+* 掌握XBridgeN的一般配置和高级配置
