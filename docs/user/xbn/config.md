@@ -38,7 +38,7 @@ XBridgeN默认包含了默认的正则表达式配置。用户也可以对正则
 ### 自助绑定白名单
 
 keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
+--|--|--|--
 ^绑定 ([A-Za-z0-9 ]{4,20})$|0|bind_whitelist|白名单申请已发送，请等待管理员审核！
 
 ![00](../../img/xbn/bind_whitelist.png)
@@ -46,7 +46,7 @@ keywords（关键词）|permission（权限）|type（动作类型）|content（
 ### 自助解绑白名单
 
 keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
+--|--|--|--
 ^解绑$|0|unbind_whitelist|解绑成功|
 
 ![01](../../img/xbn/unbind_whitelist.png)
@@ -54,7 +54,7 @@ keywords（关键词）|permission（权限）|type（动作类型）|content（
 ### 查询本人绑定状态
 
 keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
+--|--|--|--
 ^关于我$|0|bind_check_self|我的信息：|
 
 ![02](../../img/xbn/check_bind_self.png)
@@ -63,7 +63,7 @@ keywords（关键词）|permission（权限）|type（动作类型）|content（
 ### 为目标玩家添加白名单
 
 keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
+--|--|--|--
 ^加白名单 (.+$)|1|add_whitelist|已将该玩家添加到所有服务器的白名单!|
 
 ![03](../../img/xbn/add_whitelist.png)
@@ -72,7 +72,7 @@ keywords（关键词）|permission（权限）|type（动作类型）|content（
 ### 删除目标玩家的白名单
 
 keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
+--|--|--|--
 ^删白名单 (.+$)|1|del_whitelist|已将该玩家从所有服务器的白名单中移除!|
 
 ![04](../../img/xbn/del_whitelist.png)
@@ -80,7 +80,7 @@ keywords（关键词）|permission（权限）|type（动作类型）|content（
 ### 查询目标玩家的绑定状态
 
 keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
+--|--|--|--
 ^查绑定 (.+$)|1|bind_check|查询结果：|
 
 ![05](../../img/xbn/check_bind.png)
@@ -88,7 +88,7 @@ keywords（关键词）|permission（权限）|type（动作类型）|content（
 ### 执行服务器控制台指令（以“查服”为例）
 
 keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
+--|--|--|--
 ^查服$|1|runcmd|list|
 
 ![06](../../img/xbn/runcmd.png)
@@ -96,7 +96,7 @@ keywords（关键词）|permission（权限）|type（动作类型）|content（
 ### 发起异步http GET请求（以“百度”为例）
 
 keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
+--|--|--|--
 ^百度$|0|http_get|http://www.baidu.com|
 
 ![07](../../img/xbn/http_get.png)
