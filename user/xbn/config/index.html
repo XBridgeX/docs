@@ -847,22 +847,10 @@
                 
                 
                 <h1 id="xbridgen">XBridgeN：一般配置</h1>
-<p>当检测到配置文件不存在时，XBridgeN会自动生成配置文件。以下是配置文件的详细介绍。</p>
+<p>当检测到配置文件不存在时，XBridgeN会自动生成配置文件。以下配置文件均支持热修改（修改完成后无需重启程序即可生效）</p>
 <h2 id="_1">生物实体数据</h2>
-<table>
-<thead>
-<tr>
-<th>文件位置</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>./config/mobs.json</code></td>
-<td>用于保存实体（玩家、生物）命名。当玩家/生物被杀时，会通过该文件的内容将死亡事件转发到群内</td>
-</tr>
-</tbody>
-</table>
+<p><code>./config/mobs.json</code> - 用于保存实体（玩家、生物）命名。
+当玩家/生物被杀时，会通过该文件的内容将死亡事件转发到群内</p>
 <p>示例配置：
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;Arrow&quot;</span><span class="p">:</span> <span class="s2">&quot;箭&quot;</span><span class="p">,</span>
@@ -874,20 +862,7 @@
 实现的效果：</p>
 <p><img alt="09" src="../../../img/xbn/event_0.png" /></p>
 <h2 id="_2">玩家事件配置</h2>
-<table>
-<thead>
-<tr>
-<th>文件位置</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>./config/players_event.json</code></td>
-<td>配置玩家事件发生时群内发送消息的内容</td>
-</tr>
-</tbody>
-</table>
+<p><code>./config/players_event.json</code> - 配置玩家事件发生时群内发送消息的内容。</p>
 <p>示例配置：
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;player_not_admin&quot;</span><span class="p">:</span> <span class="s2">&quot;您不是管理员，无权执行该操作！&quot;</span><span class="p">,</span>  <span class="err">//非XBridgeN管理员时</span>
@@ -901,20 +876,8 @@
 </code></pre></div>
 Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件中，{0}指死亡玩家的Xbox ID，{1}为击杀玩家的实体名称。</p>
 <h2 id="_3">玩家数据</h2>
-<table>
-<thead>
-<tr>
-<th>文件位置</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>./config/players_info.json</code></td>
-<td>用于保存玩家的各项信息。一般情况下无需改动。如果需要将玩家设置为机器人管理员，只需将"permission"项的值修改为1即可。</td>
-</tr>
-</tbody>
-</table>
+<p><code>./config/players_info.json</code> - 用于保存玩家的各项信息。
+一般情况下该配置文件无需改动。</p>
 <p>示例配置：
 <div class="highlight"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
