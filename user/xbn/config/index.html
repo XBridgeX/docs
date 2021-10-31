@@ -988,44 +988,164 @@
 </code></pre>
 <p>XBridgeN默认包含了默认的正则表达式配置。用户也可以对正则内容进行修改，满足各种使用需求。以下是正则表达式的配置示例以及实现的效果：</p>
 <h3 id="_3">自助绑定白名单</h3>
-<p>keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
-^绑定 ([A-Za-z0-9 ]{4,20})$|0|bind_whitelist|白名单申请已发送，请等待管理员审核！</p>
+<table>
+<thead>
+<tr>
+<th>keywords（关键词）</th>
+<th>permission（权限）</th>
+<th>type（动作类型）</th>
+<th>content（内容）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^绑定 ([A-Za-z0-9 ]{4,20})$</td>
+<td>0</td>
+<td>bind_whitelist</td>
+<td>白名单申请已发送，请等待管理员审核！</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="00" src="../../../img/xbn/bind_whitelist.png" /></p>
 <h3 id="_4">自助解绑白名单</h3>
-<p>keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
-^解绑$|0|unbind_whitelist|解绑成功|</p>
+<table>
+<thead>
+<tr>
+<th>keywords（关键词）</th>
+<th>permission（权限）</th>
+<th>type（动作类型）</th>
+<th>content（内容）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^解绑$</td>
+<td>0</td>
+<td>unbind_whitelist</td>
+<td>解绑成功</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="01" src="../../../img/xbn/unbind_whitelist.png" /></p>
 <h3 id="_5">查询本人绑定状态</h3>
-<p>keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
-^关于我$|0|bind_check_self|我的信息：|</p>
+<table>
+<thead>
+<tr>
+<th>keywords（关键词）</th>
+<th>permission（权限）</th>
+<th>type（动作类型）</th>
+<th>content（内容）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^关于我$</td>
+<td>0</td>
+<td>bind_check_self</td>
+<td>我的信息：</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="02" src="../../../img/xbn/check_bind_self.png" /></p>
 <h3 id="_6">为目标玩家添加白名单</h3>
-<p>keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
-^加白名单 (.+$)|1|add_whitelist|已将该玩家添加到所有服务器的白名单!|</p>
+<table>
+<thead>
+<tr>
+<th>keywords（关键词）</th>
+<th>permission（权限）</th>
+<th>type（动作类型）</th>
+<th>content（内容）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^加白名单 (.+$)</td>
+<td>1</td>
+<td>add_whitelist</td>
+<td>已将该玩家添加到所有服务器的白名单!</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="03" src="../../../img/xbn/add_whitelist.png" /></p>
 <h3 id="_7">删除目标玩家的白名单</h3>
-<p>keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
-^删白名单 (.+$)|1|del_whitelist|已将该玩家从所有服务器的白名单中移除!|</p>
+<table>
+<thead>
+<tr>
+<th>keywords（关键词）</th>
+<th>permission（权限）</th>
+<th>type（动作类型）</th>
+<th>content（内容）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^删白名单 (.+$)</td>
+<td>1</td>
+<td>del_whitelist</td>
+<td>已将该玩家从所有服务器的白名单中移除!</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="04" src="../../../img/xbn/del_whitelist.png" /></p>
 <h3 id="_8">查询目标玩家的绑定状态</h3>
-<p>keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
-^查绑定 (.+$)|1|bind_check|查询结果：|</p>
+<table>
+<thead>
+<tr>
+<th>keywords（关键词）</th>
+<th>permission（权限）</th>
+<th>type（动作类型）</th>
+<th>content（内容）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^查绑定 (.+$)</td>
+<td>1</td>
+<td>bind_check</td>
+<td>查询结果：</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="05" src="../../../img/xbn/check_bind.png" /></p>
 <h3 id="_9">执行服务器控制台指令（以“查服”为例）</h3>
-<p>keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
-^查服$|1|runcmd|list|</p>
+<table>
+<thead>
+<tr>
+<th>keywords（关键词）</th>
+<th>permission（权限）</th>
+<th>type（动作类型）</th>
+<th>content（内容）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^查服$</td>
+<td>1</td>
+<td>runcmd</td>
+<td>list</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="06" src="../../../img/xbn/runcmd.png" /></p>
 <h3 id="http-get">发起异步http GET请求（以“百度”为例）</h3>
-<p>keywords（关键词）|permission（权限）|type（动作类型）|content（内容）|
---|--|--|--|--
-^百度$|0|http_get|http://www.baidu.com|</p>
+<table>
+<thead>
+<tr>
+<th>keywords（关键词）</th>
+<th>permission（权限）</th>
+<th>type（动作类型）</th>
+<th>content（内容）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^百度$</td>
+<td>0</td>
+<td>http_get</td>
+<td>http://www.baidu.com</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="07" src="../../../img/xbn/http_get.png" /></p>
 <h3 id="_10">自动应答群消息（以“帮助”为例）</h3>
 <table>
