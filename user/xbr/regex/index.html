@@ -927,16 +927,12 @@
 <p>一个标准的正则成员应该包括<code>Regex</code>,<code>permission</code>和<code>out</code></p>
 <div class="highlight"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
-        <span class="nt">&quot;Regex&quot;</span><span class="p">:</span> <span class="s2">&quot;绑定xboxid\\s([a-zA-Z0-9\\s]{4,16})$&quot;</span><span class="p">,</span>  <span class="err">//正则表达式主体</span>
-        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="err">//发言人权限等级，</span><span class="mi">0</span><span class="err">为所有人，</span><span class="mi">1</span><span class="err">为XBridge管理员</span>
+        <span class="nt">&quot;Regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^服务器占用$&quot;</span><span class="p">,</span>  <span class="err">//正则表达式主体</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="err">//执行权限，</span><span class="mi">0</span><span class="err">为所有人，</span><span class="mi">1</span><span class="err">为XBridgeR管理员</span>
         <span class="nt">&quot;out&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;runcmdall&quot;</span><span class="p">,</span>  <span class="err">//执行模式</span>
-                <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;whitelist add \&quot;$1\&quot;&quot;</span>  <span class="err">//执行语句</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;group&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;白名单：$1 已添加&quot;</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;group&quot;</span><span class="p">,</span>  <span class="err">//执行模式，即下文的XB_API</span>
+                <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;CPU：%COMPUTER_CPU_PERCENT%%\n内存：%COMPUTER_RAM_USED%G/%COMPUTER_RAM_TOTAL%G（%COMPUTER_RAM_PERCENT%%）&quot;</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">}</span>
