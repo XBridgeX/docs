@@ -10,17 +10,18 @@ nav:
       - 安装: LLWS/install.md
       - 数据包: LLWS/pack.md
     - 用户手册:
-      - XBridgeN:
+      - XBridge-N:
         - 概述: user/xbn/index.md
         - 使用指南: user/xbn/install.md
         - 配置: user/xbn/config.md
-      - XBridge-CSharp:
-        - 概述: user/xbcsharp/index.md
-        - 安装: user/xbcsharp/install.md
-        - 文件: user/xbcsharp/files.md
-        - 用户命令: user/xbcsharp/user_cmd.md
-        - 原生命令: user/xbcsharp/native_cmd.md
-        - 正则表达式: user/xbcsharp/regex.md
+      - XBridgeR:
+        - 概述: user/xbr/index.md
+        - 安装: user/xbr/install.md
+        - 文件: user/xbr/files.md
+        - 用户命令: user/xbr/user_cmd.md
+        - 原生命令: user/xbr/native_cmd.md
+        - 正则表达式: user/xbr/regex.md
+        - websocket开发: user/xbr/wss.md
       - MSB:
         - 占位符: user/MSB/place_holder.md
     - 开发手册:

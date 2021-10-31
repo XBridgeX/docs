@@ -1,4 +1,4 @@
-# <center>XBridge原生命令</center>
+# <center>XBridgeR</center>
 
 
 <center>在任意主群(Group.main)，具有管理员身份的群员均可使用```/xb run xxx```来执行XBridge命令</center>

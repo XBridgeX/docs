@@ -1,13 +1,16 @@
-# XBridgeN：使用指南
+# 使用指南
 ## 环境要求
 * 主流的操作系统平台（包括但不限于Windows、Linux、MacOS）；
 * 操作系统需要安装Node.js环境，且Node.js版本要求为14.x及以上
 
 ## 安装和使用
 1. 安装 [Node.js](https://nodejs.org/)（要求Node.js版本为14.x及以上）；
-2. 下载 [XBridgeN](https://github.com/XBridgeX/XBridge-Nodejs/releases/download/v1.0.0_beta10282343/XBridge-N_1.0.0_beta10282343.zip)；
-3. 解压，然后进入XBridgeN目录，在该目录下打开终端，输入 `npm i` 安装依赖模块；
-4. 打开`run.bat`（Windows用户）或`run.sh`（Linux用户）,启动XBridgeN。初次启动后会在目录下创建配置文件，并自动退出。配置文件位于`/config`目录下；
+2. 将本项目克隆到本地：
+```bash
+git clone https://github.com/XBridgeX/XBridge-Nodejs.git
+```
+3. 进入XBridge-Nodejs目录，在该目录下打开终端，输入 `npm i` 安装依赖模块；
+4. 在终端输入`node main.js`启动机器人。初次启动后会在目录下创建配置文件，并自动退出。配置文件位于`/config`目录下；
 5. 根据实际情况修改好配置文件后，再次启动机器人；
 6. 启动任意一个WebSocket服务端，然后启动本机器人。当控制台出现以下类似的提示时，说明机器人配置无误且运行正常：
 ```

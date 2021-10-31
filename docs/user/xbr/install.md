@@ -1,4 +1,4 @@
-# <center>XBridge-CSharp</center>
+# <center>XBridgeR</center>
 
 <center>与基岩版MC服务器的QQ远控</center>
 
