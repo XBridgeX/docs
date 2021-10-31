@@ -590,6 +590,26 @@
     通信
   </a>
   
+    <nav class="md-nav" aria-label="通信">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    消息包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    发信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -789,6 +809,26 @@
     通信
   </a>
   
+    <nav class="md-nav" aria-label="通信">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    消息包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    发信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -823,7 +863,35 @@
 </code></pre></div>
 <hr />
 <h2 id="_1">通信</h2>
-<p>施工中...</p>
+<h3 id="_2"><center>消息包</center></h3>
+<p>wss在发送群内收到的信息时，会把信息解析为消息包，如下是一个标准的消息包</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;from&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;member&quot;</span><span class="p">:</span><span class="mi">114514</span><span class="p">,</span>  <span class="err">//发信者QQ号</span>
+        <span class="nt">&quot;xboxid&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>   <span class="err">//发信者XBOXID，没有记录为Null</span>
+        <span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="mi">1919810</span>  <span class="err">//来源群</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;messageChain&quot;</span><span class="p">:[</span>
+        <span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;PlanText&quot;</span><span class="p">,</span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;？&quot;</span><span class="p">},</span>  <span class="err">//纯文本</span>
+        <span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;At&quot;</span><span class="p">,</span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="mi">12345678</span><span class="p">},</span>  <span class="err">//A</span><span class="kc">t</span><span class="err">某人</span>
+        <span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;Image&quot;</span><span class="p">},</span>  <span class="err">//图片</span>
+        <span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;AtAll&quot;</span><span class="p">},</span>   <span class="err">//A</span><span class="kc">t</span><span class="err">全体成员</span>
+        <span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;Face&quot;</span><span class="p">,</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">}</span> <span class="err">//小表情</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="_3"><center>发信息</center></h3>
+<p>通过数据包同样可以发送信息到群聊</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="s2">&quot;send&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="mi">114514</span><span class="p">,</span>
+        <span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;你好&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>这个包会向114514群聊发送你好</p>
                 
               
               
