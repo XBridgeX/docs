@@ -6,7 +6,7 @@
 
 ## 玩家加入(服务端发出
 
-```jsonc
+```json
 {
     "type":"pack",
     "cause": "join",
@@ -20,7 +20,7 @@
 
 ## 玩家退出(服务端发出
 
-```jsonc
+```json
 {
     "type":"pack",
     "cause": "left",
@@ -33,7 +33,7 @@
 
 ## 玩家使用命令(服务端发出
 
-```jsonc
+```json
 {
     "type":"pack",
     "cause": "cmd",
@@ -80,7 +80,7 @@
 
 ## 加密包
 
-```jsonc
+```json
 {
     "type": "encrypted",
     "params": {
@@ -92,7 +92,7 @@
 
 ## 解密错误
 
-```jsonc
+```json
 {
     "type": "pack",
     "cause": "decodefailed",
@@ -104,7 +104,7 @@
 
 ## 请求无效（插件端要求使用加密数据包）
 
-```jsonc
+```json
 {
     "type": "pack",
     "cause": "invalidrequest",
