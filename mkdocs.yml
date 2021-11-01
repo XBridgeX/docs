@@ -10,6 +10,7 @@ nav:
       - 安装: LLWS/install.md
       - 数据包: LLWS/pack.md
     - 用户手册:
+      - 主页: user/index.md
       - XBridgeN:
         - 概述: user/xbn/index.md
         - 开始使用: user/xbn/start.md

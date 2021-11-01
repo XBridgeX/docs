@@ -16,13 +16,22 @@ Meet capable server owners or developers for custom robot development
 
 ## 项目状态
 
-|项目|描述|状态|
+### 核心组件
+
+|项目|使用语言|状态|
 |--|--|--|
-|XBridge-Nodejs|基于Node的xbridge|<font color="DarkSeaGreen">长期活跃</font>|
-|XBridge-CSharp|基于C#的XBridge|<font color="DarkSeaGreen">长期活跃</font>|
-|XBridge-Python|基于Python的XBridge|<font color="DarkMagenta">半搁置</font>|
-|XBridge-Lua|基于Lua的XBridge|<font color="DarkMagenta">半搁置</font>|
-|KWO|一款轻量化的bedrock_server启动器|<font color="DarkSeaGreen">长期活跃</font>|
+|XBridge-Nodejs|Node.js|<font color="DarkSeaGreen">已完工</font>|
+|XBridge-CSharp|C#|<font color="DarkSeaGreen">已完工</font>|
+|XBridge-Python|Python|<font color="DarkMagenta">半完工</font>|
+|XBridge-Lua|Lua|<font color="DarkSeaGreen">已完工</font>|
+
+### 机器人适配
+
+|项目|使用项目|机器人框架|
+|--|--|--|
+|XBridgeR|XBridge-CSharp|[Mirai](https://github.com/mamoe/mirai)|
+|XBridgeN|XBridge-Nodejs|[QICO](https://github.com/takayama-lily/oicq)|
+|XBridgeA|XBridge-Lua|[ColorMirai](https://github.com/Coloryr/ColorMirai)|
 
 
 ## 快速导航
@@ -31,6 +40,6 @@ Meet capable server owners or developers for custom robot development
 
 - [LLWS文档](./LLWS/pack.md)
 
-- Xbridge子项目文档(编写中)
+- [用户手册](./user/index.md)
 
 - [关于](./about.md)
