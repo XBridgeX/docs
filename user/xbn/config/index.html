@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -880,15 +880,15 @@
 <p>示例配置：
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;player_not_admin&quot;</span><span class="p">:</span> <span class="s2">&quot;您不是管理员，无权执行该操作！&quot;</span><span class="p">,</span>  <span class="err">//非XBridgeN管理员时</span>
-    <span class="nt">&quot;player_join&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {0} 加入了服务器&quot;</span><span class="p">,</span>     <span class="err">//玩家加入服务器时</span>
-    <span class="nt">&quot;player_left&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {0} 离开了服务器&quot;</span><span class="p">,</span>     <span class="err">//玩家退出服务器时</span>
+    <span class="nt">&quot;player_join&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 加入了服务器&quot;</span><span class="p">,</span>        <span class="err">//玩家加入服务器时</span>
+    <span class="nt">&quot;player_left&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 离开了服务器&quot;</span><span class="p">,</span>        <span class="err">//玩家退出服务器时</span>
     <span class="nt">&quot;player_die&quot;</span><span class="p">:</span> <span class="p">{</span>     <span class="err">//玩家死亡事件</span>
-        <span class="nt">&quot;cause_by_mobs&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {0} 被 {1} 杀死了&quot;</span><span class="p">,</span>    <span class="err">//玩家被生物击杀时</span>
-        <span class="nt">&quot;cause_unknown&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {0} 啪唧一下死掉了&quot;</span>   <span class="err">//玩家因未知原因死亡时</span>
+        <span class="nt">&quot;cause_by_mobs&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 被 {mob} 杀死了&quot;</span><span class="p">,</span> <span class="err">//玩家被生物击杀时</span>
+        <span class="nt">&quot;cause_unknown&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 啪唧一下死掉了&quot;</span>  <span class="err">//玩家因未知原因死亡时</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件中，{0}指死亡玩家的Xbox ID，{1}为击杀玩家的实体名称。</p>
+Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件中，{player}指死亡玩家的Xbox ID，{mob}为击杀玩家的实体名称。</p>
 <h2 id="_3">玩家数据</h2>
 <p><code>./config/players_info.json</code> - 用于保存玩家的各项信息。
 一般情况下该配置文件无需改动。</p>
@@ -976,7 +976,7 @@ Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件�
     <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "seach.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>
