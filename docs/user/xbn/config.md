@@ -27,15 +27,15 @@
 ```json
 {
 	"player_not_admin": "您不是管理员，无权执行该操作！",	//非XBridgeN管理员时
-	"player_join": "玩家 {0} 加入了服务器",		//玩家加入服务器时
-	"player_left": "玩家 {0} 离开了服务器",		//玩家退出服务器时
+	"player_join": "玩家 {player} 加入了服务器",		//玩家加入服务器时
+	"player_left": "玩家 {player} 离开了服务器",		//玩家退出服务器时
 	"player_die": {		//玩家死亡事件
-		"cause_by_mobs": "玩家 {0} 被 {1} 杀死了",	//玩家被生物击杀时
-		"cause_unknown": "玩家 {0} 啪唧一下死掉了"	//玩家因未知原因死亡时
+		"cause_by_mobs": "玩家 {player} 被 {mob} 杀死了",	//玩家被生物击杀时
+		"cause_unknown": "玩家 {player} 啪唧一下死掉了"	//玩家因未知原因死亡时
 	}
 }
 ```
-Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件中，{0}指死亡玩家的Xbox ID，{1}为击杀玩家的实体名称。
+Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件中，{player}指死亡玩家的Xbox ID，{mob}为击杀玩家的实体名称。
 
 ## 玩家数据
 

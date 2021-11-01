@@ -10,7 +10,7 @@
 一个正则表达式配置文件的基本结构包括 **regex（正则体）**、**permission（所需执行权限）**、**actions（动作组）**。而**actions**内可以包含一个或多个动作。当玩家在群内发送消息时，如果发送的文本和正则表达式中配置中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的动作。
 
 XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。用户也可以对正则内容进行修改，满足各种使用场景的需求。下面将会针对默认的正则表达式配置文件进行详细介绍。
-
+---
 ### 自助绑定白名单
 
 ```json
@@ -28,7 +28,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 ```
 
 ![00](../../img/xbn/bind_whitelist.png)
-
+---
 ### 自助解绑白名单
 
 ```json
@@ -46,7 +46,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 ```
 
 ![01](../../img/xbn/unbind_whitelist.png)
-
+---
 ### 查询本人绑定状态
 
 ```json
@@ -65,7 +65,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 
 ![02](../../img/xbn/check_bind_self.png)
 
-
+---
 ### 为目标玩家添加白名单
 
 ```json
@@ -85,7 +85,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 
 ![03](../../img/xbn/add_whitelist.png)
 
-
+---
 ### 删除目标玩家的白名单
 
 ```json
@@ -103,7 +103,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 ```
 
 ![04](../../img/xbn/del_whitelist.png)
-
+---
 ### 查询目标玩家的绑定状态
 
 ```json
@@ -121,7 +121,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 ```
 
 ![05](../../img/xbn/check_bind.png)
-
+---
 ### 执行服务器控制台指令（以“查服”为例）
 
 ```json
@@ -138,7 +138,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 ```
 
 ![06](../../img/xbn/runcmd.png)
-
+---
 ### 发起异步http GET请求（以“百度”为例）
 
 ```json
@@ -157,7 +157,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 ```
 
 ![07](../../img/xbn/http_get.png)
-
+---
 ### 群消息（以“帮助”为例）
 
 ```json
@@ -167,10 +167,29 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 	"actions": [
 		{
 			"type": "group_message",
-			"content": "[Tokiame Bot 帮助信息]...（省略一万字）"
+			"content": "这是一条没用的帮助信息"
 		}
 	]
 }
 ```
 
 ![08](../../img/xbn/group_message.png)
+
+---
+### 查询服务器状态
+
+```json
+{
+	"regex": "^状态$",
+	"permission": 0,
+	"actions": [
+		{
+			"type": "sys_info",
+			"content": "服务器状态\nCPU使用率：{cpu_usage}\n内存使用：{mem_usage_size}"
+		}
+	]
+}
+```
+![09](../../img/xbn/sysinfo.png)
+
+Tips：该配置文件支持占位符功能。{cpu_usage}指CPU使用率，{mem_usage_present}和{mem_usage_size}均指内存使用（前者以百分比形式显示，后者以容量形式显示）
