@@ -35,12 +35,16 @@
 	}
 }
 ```
-Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件中，{player}指死亡玩家的Xbox ID，{mob}为击杀玩家的实体名称。
+
+占位符|说明
+---|---
+{player}|玩家Xbox ID
+{mob}|攻击玩家的生物名称
 
 ## 玩家数据
 
 `./config/players_info.json` - 用于保存玩家的各项信息。
-一般情况下该配置文件无需改动。
+一般情况下该配置文件无需改动。如果需要为玩家设置XBridgeN管理员，请将该玩家的permission值修改为1。
 
 示例配置：
 ```json
@@ -53,3 +57,6 @@ Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件�
 	}
 ]
 ```
+
+## 正则表达式
+请参阅下一节内容：[**XBridgeN：高级配置**](./regex.md)
