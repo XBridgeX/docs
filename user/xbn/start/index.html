@@ -864,8 +864,8 @@
     <span class="nt">&quot;login_qrcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="err">//是否使用扫码登录，默认为</span><span class="kc">true</span><span class="err">。如使用密码登录，请改为</span><span class="kc">false</span>
     <span class="nt">&quot;use_protocol&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="err">//设置QQ登录协议。</span><span class="mi">1</span><span class="p">:</span><span class="err">安卓手机</span> <span class="mi">2</span><span class="p">:</span><span class="err">安卓平板</span> <span class="mi">3</span><span class="p">:</span><span class="err">安卓手表</span> <span class="mi">4</span><span class="p">:</span><span class="err">MacOS</span> <span class="mi">5</span><span class="p">:</span><span class="err">iPad</span>
     <span class="nt">&quot;qq_password&quot;</span><span class="p">:</span> <span class="s2">&quot;qqpassword&quot;</span><span class="p">,</span>  <span class="err">//机器人QQ密码。仅在</span><span class="s2">&quot;login_qrcode&quot;</span><span class="err">为</span><span class="kc">false</span><span class="err">（使用密码登录）时，该项配置才有效</span>
-    <span class="nt">&quot;ws_address&quot;</span><span class="p">:</span> <span class="s2">&quot;ws://127.0.0.1:8080&quot;</span><span class="p">,</span>    <span class="err">//WebSocke</span><span class="kc">t</span><span class="err">服务器地址</span>
-    <span class="nt">&quot;ws_password&quot;</span><span class="p">:</span> <span class="s2">&quot;wspassword&quot;</span><span class="p">,</span>    <span class="err">//WebSocke</span><span class="kc">t</span><span class="err">通信密钥，请与WebSocke</span><span class="kc">t</span><span class="err">服务端通信密钥保持一致</span>
+    <span class="nt">&quot;ws_address&quot;</span><span class="p">:</span> <span class="s2">&quot;ws://127.0.0.1:8080&quot;</span><span class="p">,</span>    <span class="err">//WebSocke</span><span class="kc">t</span><span class="err">服务器组件地址</span>
+    <span class="nt">&quot;ws_password&quot;</span><span class="p">:</span> <span class="s2">&quot;wspassword&quot;</span><span class="p">,</span>    <span class="err">//WebSocke</span><span class="kc">t</span><span class="err">组件通信密钥</span>
     <span class="nt">&quot;qq_group&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">&quot;123456&quot;</span>   <span class="err">//QQ群号，目前暂时只支持一个QQ群</span>
     <span class="p">],</span>
@@ -873,7 +873,7 @@
 <span class="p">}</span>
 </code></pre></div></li>
 </ol>
-<p>WebSocket服务器地址请参考以下格式进行填写：
+<p>WebSocket服务器组件地址请参考以下格式进行填写：
 <img alt="01" src="../../../img/xbn/ws-format.png" /></p>
 <ol>
 <li>全局配置修改完成并保存后，再次启动XBridgeN；</li>
