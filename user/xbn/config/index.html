@@ -482,6 +482,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    正则表达式
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -847,6 +854,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    正则表达式
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -887,11 +901,28 @@
         <span class="nt">&quot;cause_unknown&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 啪唧一下死掉了&quot;</span>  <span class="err">//玩家因未知原因死亡时</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
-Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件中，{player}指死亡玩家的Xbox ID，{mob}为击杀玩家的实体名称。</p>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>占位符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{player}</td>
+<td>玩家Xbox ID</td>
+</tr>
+<tr>
+<td>{mob}</td>
+<td>攻击玩家的生物名称</td>
+</tr>
+</tbody>
+</table>
 <h2 id="_3">玩家数据</h2>
 <p><code>./config/players_info.json</code> - 用于保存玩家的各项信息。
-一般情况下该配置文件无需改动。</p>
+一般情况下该配置文件无需改动。如果需要为玩家设置XBridgeN管理员，请将该玩家的permission值修改为1。</p>
 <p>示例配置：
 <div class="highlight"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
@@ -902,6 +933,8 @@ Tips：该配置文件支持占位符功能。例如，在"cause_by_mobs"事件�
     <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div></p>
+<h2 id="_4">正则表达式</h2>
+<p>请参阅下一节内容：<a href="./xbn/regex.md"><strong>XBridgeN：高级配置</strong></a></p>
                 
               
               
