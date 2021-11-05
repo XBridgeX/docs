@@ -1,15 +1,98 @@
 # XBridgeN：高级配置
 ## 正则表达式
-正则表达式是XBridgeN的核心功能。
+正则表达式是XBridgeN的核心功能。XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。用户可以根据实际需要，对正则内容进行修改，满足各种使用场景的需求。
 
 文件位置|说明
 --|--
 `/config/regex.json`|配置群消息自动应答规则。
 
 
-一个正则表达式配置文件的基本结构包括 **regex（正则体）**、**permission（所需执行权限）**、**actions（动作组）**。而**actions**内可以包含一个或多个动作。当玩家在群内发送消息时，如果发送的文本和正则表达式中配置中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的动作。动作可以是执行指令，也可以是群内发送消息。
+一个正则表达式配置文件的基本结构包括 **regex（正则体）**、**permission（所需执行权限）**、**actions（动作组）**。而**actions**内可以包含一个或多个动作，每个动作的基本结构为**type（动作类型）**和**content（动作内容）**。当玩家在群内发送消息时，如果发送的文本和正则表达式中配置中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的动作组。动作可以是执行指令，也可以是群内发送消息。下面将会针对默认的正则表达式配置进行详细介绍。
 
-XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。用户可以根据实际需要，对正则内容进行修改，满足各种使用场景的需求。下面将会针对默认的正则表达式配置进行详细介绍。
+---
+### 执行预定指令（以“查服”为例）
+
+```json
+{
+	"regex": "^查服$",
+	"permission": 0,
+	"actions": [
+		{
+			"type": "runcmd",
+			"content": "list"	//指令内容
+		}
+	]
+}
+```
+
+![06](../../img/xbn/runcmd.png)
+
+---
+### 执行自定义指令（以“whitelist reload”为例）
+
+```json
+{
+	"regex": "^/cmd (.+$)",
+	"permission": 1,
+	"actions": [
+		{
+			"type": "runcmd_raw",
+			"content": "指令发送成功！"
+		}
+	]
+}
+```
+
+![01](../../img/xbn/cmdraw.png)
+
+---
+### 云黑自主查询
+
+```json
+{
+	"regex": "^查云黑 (xboxid|qq) (.+)$",	//正则中的(xboxid|qq)部分为查询类型，切勿修改其内容和位置
+	"permission": 0,
+	"actions": [
+		{
+			"type": "blackbe_check",
+			"content": "[云黑查询结果]"
+		}
+	]
+}
+```
+
+![10](../../img/xbn/bbe_qq.png)
+![10](../../img/xbn/bbe_qq_at.png)
+![111](../../img/xbn/bbe_id.png)
+
+**Tips**：云黑自主查询目前支持查询Xbox ID和QQ，只需在查询时在查询目标前附上查询类型（xboxid或qq）即可。
+
+---
+
+### 查询服务器状态
+
+```json
+{
+	"regex": "^状态$",
+	"permission": 0,
+	"actions": [
+		{
+			"type": "sys_info",
+			"content": "服务器状态\nCPU使用：{cpu_usage}\n内存使用：{mem_usage}\n已运行时间：{sys_uptime}"
+		}
+	]
+}
+```
+![09](../../img/xbn/sysinfo.png)
+
+占位符|说明
+---|---
+{cpu_usage}|CPU使用率
+{mem_usage_present}|内存使用率（以百分比形式显示）
+{mem_usage_size}|内存使用率（以容量形式显示）
+{sys_uptime}|系统已运行时间
+
+**Tips**：这里查询的是XBridgeN所在服务器的状态。如果需要查询BDS服务器的状态，建议将XBridgeN与BDS部署在同一台主机上。
 
 ---
 ### 自助绑定白名单
@@ -20,13 +103,13 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 	"permission": 0,		//所需执行权限
 	"actions": [	//动作组
 		{
-			"type": "bind_whitelist",	//动作类型
-			"content": "白名单申请已发送，请等待管理员审核！",
-			"whitelist_already_apply": "你已经申请过白名单了，请勿重复提交！"
+			"type": "bind_whitelist",	//动作模式
+			"content": "白名单申请已发送，请等待管理员审核！"	//动作内容，一般为动作执行后的群消息提示
 		}
 	]
 }
 ```
+
 ![00](../../img/xbn/bind_whitelist.png)
 
 ---
@@ -39,8 +122,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 	"actions": [
 		{
 			"type": "unbind_whitelist",
-			"content": "解绑成功！",
-			"player_not_bind": "无需解绑：你还没有绑定！"
+			"content": "解绑成功！"
 		}
 	]
 }
@@ -53,13 +135,12 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 
 ```json
 {
-	"regex": "^关于我$",
+	"regex": "^我的绑定$",
 	"permission": 0,
 	"actions": [
 		{
 			"type": "bind_check_self",
-			"content": "我的信息：",
-			"player_not_bind": "请先绑定白名单！"
+			"content": "您的绑定信息："
 		}
 	]
 }
@@ -77,9 +158,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 	"actions": [
 		{
 			"type": "add_whitelist",
-			"content": "已将该玩家添加到所有服务器的白名单!",
-			"whitelist_already_add": "该玩家已经绑定，且已添加过白名单过了！",
-			"player_not_bind": "该玩家未绑定，无法为其添加白名单！"
+			"content": "已将该玩家添加到所有服务器的白名单!"
 		}
 	]
 }
@@ -97,8 +176,7 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 	"actions": [
 		{
 			"type": "del_whitelist",
-			"content": "已将该玩家从所有服务器的白名单中移除!",
-			"player_not_bind": "无需删除白名单：该玩家未绑定！"
+			"content": "已将该玩家从所有服务器的白名单中移除!"
 		}
 	]
 }
@@ -116,32 +194,13 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 	"actions": [
 		{
 			"type": "bind_check",
-			"content": "查询结果：",
-			"player_not_bind": "该玩家未绑定，未查询到任何信息！"
+			"content": "查询结果："
 		}
 	]
 }
 ```
 
 ![05](../../img/xbn/check_bind.png)
-
----
-### 执行服务器控制台指令（以“查服”为例）
-
-```json
-{
-	"regex": "^查服$",
-	"permission": 0,
-	"actions": [
-		{
-			"type": "runcmd",
-			"content": "list"	//指令内容
-		}
-	]
-}
-```
-
-![06](../../img/xbn/runcmd.png)
 
 ---
 ### 发起异步http GET请求（以“百度”为例）
@@ -182,26 +241,3 @@ XBridgeN包含了默认的正则表达式配置，涵盖了大部分的功能。
 ![08](../../img/xbn/group_message.png)
 
 ---
-### 查询服务器状态
-
-```json
-{
-	"regex": "^状态$",
-	"permission": 0,
-	"actions": [
-		{
-			"type": "sys_info",
-			"content": "服务器状态\nCPU使用率：{cpu_usage}\n内存使用：{mem_usage_size}"
-		}
-	]
-}
-```
-![09](../../img/xbn/sysinfo.png)
-
-占位符|说明
----|---
-{cpu_usage}|CPU使用率
-{mem_usage_present}|内存使用率（以百分比形式显示）
-{mem_usage_size}|内存使用率（以容量形式显示）
-
-需要注意的是，这里查询的是XBridgeN所在服务器的状态。如果需要查询BDS服务器的状态，建议将XBridgeN与BDS部署在同一台主机上。
