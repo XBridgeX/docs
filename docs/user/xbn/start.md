@@ -26,6 +26,7 @@
 
 WebSocket服务器地址请参照以下格式进行填写：
 ![01](../../img/xbn/ws-format.png)
+
 5. 全局配置修改完成并保存后，再次启动XBridgeN；
 6. 启动BDS。当XBridgeN控制台出现类似以下的提示时，说明XBridgeN配置无误且运行正常：
 ```
