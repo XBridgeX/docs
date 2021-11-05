@@ -1,5 +1,5 @@
 # XBridgeN：概述
-![GitHub](https://img.shields.io/github/license/XBridgeX/XBridge-Nodejs) ![GitHub forks](https://img.shields.io/github/forks/XBridgeX/XBridge-Nodejs) ![GitHub contributors](https://img.shields.io/github/contributors/XBridgeX/XBridge-Nodejs?color=orange) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/XBridgeX/XBridge-Nodejs/dev)
+![GitHub](https://img.shields.io/github/license/XBridgeX/XBridge-Nodejs) ![GitHub forks](https://img.shields.io/github/forks/XBridgeX/XBridge-Nodejs) ![GitHub contributors](https://img.shields.io/github/contributors/XBridgeX/XBridge-Nodejs?color=orange) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/XBridgeX/XBridge-Nodejs/dev) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/XBridgeX/XBridge-Nodejs?include_prereleases)
 
 **XBridgeN** 是XBridgeX项目下的一个群服互通机器人，基于[OICQ](https://github.com/takayama-lily/oicq)机器人框架、Node.js平台进行构建。
 目前，XBridgeN已支持与基岩版服务器的主流WebSocket组件进行对接：
