@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -851,7 +851,7 @@
 <ul>
 <li>确保使用的是主流的操作系统平台（包括但不限于Windows、Linux、MacOS）；</li>
 <li>确保操作系统已安装Node.js环境（Node.js版本要求为14.x及以上）；</li>
-<li>确保BDS端已部署好WebSocket服务器组件（LLWebSocket、XWebSocket或KWO）。相关组件可前往 <a href="https://jq.qq.com/?_wv=1027&amp;k=rmCKLG7M">XBridgeX交流群</a> 获取。</li>
+<li>确保BDS端已部署好<strong>WebSocket服务器组件（LLWebSocket、XWebSocket或KWO）</strong>。相关组件可前往 <a href="https://jq.qq.com/?_wv=1027&amp;k=rmCKLG7M">XBridgeX交流群</a> 获取。</li>
 </ul>
 <h2 id="_2">初始配置与使用</h2>
 <ol>
@@ -864,8 +864,8 @@
     <span class="nt">&quot;login_qrcode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="err">//是否使用扫码登录，默认为</span><span class="kc">true</span><span class="err">。如使用密码登录，请改为</span><span class="kc">false</span>
     <span class="nt">&quot;use_protocol&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="err">//设置QQ登录协议。</span><span class="mi">1</span><span class="p">:</span><span class="err">安卓手机</span> <span class="mi">2</span><span class="p">:</span><span class="err">安卓平板</span> <span class="mi">3</span><span class="p">:</span><span class="err">安卓手表</span> <span class="mi">4</span><span class="p">:</span><span class="err">MacOS</span> <span class="mi">5</span><span class="p">:</span><span class="err">iPad</span>
     <span class="nt">&quot;qq_password&quot;</span><span class="p">:</span> <span class="s2">&quot;qqpassword&quot;</span><span class="p">,</span>  <span class="err">//机器人QQ密码。仅在</span><span class="s2">&quot;login_qrcode&quot;</span><span class="err">为</span><span class="kc">false</span><span class="err">（使用密码登录）时，该项配置才有效</span>
-    <span class="nt">&quot;ws_address&quot;</span><span class="p">:</span> <span class="s2">&quot;ws://127.0.0.1:8080&quot;</span><span class="p">,</span>    <span class="err">//WebSocke</span><span class="kc">t</span><span class="err">服务器组件地址</span>
-    <span class="nt">&quot;ws_password&quot;</span><span class="p">:</span> <span class="s2">&quot;wspassword&quot;</span><span class="p">,</span>    <span class="err">//WebSocke</span><span class="kc">t</span><span class="err">组件通信密钥</span>
+    <span class="nt">&quot;ws_address&quot;</span><span class="p">:</span> <span class="s2">&quot;ws://127.0.0.1:8080&quot;</span><span class="p">,</span>    <span class="err">//WebSocke</span><span class="kc">t</span><span class="err">服务器地址</span>
+    <span class="nt">&quot;ws_password&quot;</span><span class="p">:</span> <span class="s2">&quot;wspassword&quot;</span><span class="p">,</span>    <span class="err">//WebSocke</span><span class="kc">t</span><span class="err">服务器通信密钥</span>
     <span class="nt">&quot;qq_group&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">&quot;123456&quot;</span>   <span class="err">//QQ群号，目前暂时只支持一个QQ群</span>
     <span class="p">],</span>
@@ -873,11 +873,10 @@
 <span class="p">}</span>
 </code></pre></div></li>
 </ol>
-<p>WebSocket服务器组件地址请参考以下格式进行填写：
-<img alt="01" src="../../../img/xbn/ws-format.png" /></p>
-<ol>
-<li>全局配置修改完成并保存后，再次启动XBridgeN；</li>
-<li>启动BDS。当XBridgeN控制台出现类似以下的提示时，说明XBridgeN配置无误且运行正常：
+<p>WebSocket服务器地址请参照以下格式进行填写：
+<img alt="01" src="../../../img/xbn/ws-format.png" />
+5. 全局配置修改完成并保存后，再次启动XBridgeN；
+6. 启动BDS。当XBridgeN控制台出现类似以下的提示时，说明XBridgeN配置无误且运行正常：
 <div class="highlight"><pre><span></span><code>WS服务器连接成功！
 [2021-10-21T15:54:18.496] [MARK] [iPad:123456] - 正在探索可用服务器...
 [2021-10-21T15:54:18.551] [MARK] [iPad:123456] - connecting to 109.244.168.25:8080
@@ -885,8 +884,7 @@
 [2021-10-21T15:54:18.973] [MARK] [iPad:123456] - Welcome, abc ! 初始化资源...
 [2021-10-21T15:54:19.205] [MARK] [iPad:123456] - 加载了1个好友，1个群，1个陌生人。
 [2021-10-21T15:54:19.349] [MARK] [iPad:123456] - 初始化完毕，开始处理消息。
-</code></pre></div></li>
-</ol>
+</code></pre></div></p>
                 
               
               
@@ -961,7 +959,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "seach.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>

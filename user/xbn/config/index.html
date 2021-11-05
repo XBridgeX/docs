@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -890,16 +890,43 @@
 实现的效果：</p>
 <p><img alt="09" src="../../../img/xbn/event_0.png" /></p>
 <h2 id="_2">玩家事件配置</h2>
-<p><code>./config/players_event.json</code> - 配置玩家事件发生时群内发送消息的内容。</p>
+<p><code>./config/players_event.json</code> - 配置群服联动功能。</p>
 <p>示例配置：
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;player_not_admin&quot;</span><span class="p">:</span> <span class="s2">&quot;您不是管理员，无权执行该操作！&quot;</span><span class="p">,</span>  <span class="err">//非XBridgeN管理员时</span>
-    <span class="nt">&quot;player_join&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 加入了服务器&quot;</span><span class="p">,</span>        <span class="err">//玩家加入服务器时</span>
-    <span class="nt">&quot;player_left&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 离开了服务器&quot;</span><span class="p">,</span>        <span class="err">//玩家退出服务器时</span>
+    <span class="nt">&quot;black_be&quot;</span><span class="p">:</span> <span class="p">{</span>   <span class="err">//云黑功能</span>
+        <span class="nt">&quot;join_group_detection&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>   <span class="err">//是否启用加群云黑检测</span>
+        <span class="nt">&quot;autonomous_check&quot;</span><span class="p">:</span> <span class="kc">true</span>        <span class="err">//是否启用自助云黑查询</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;player_join&quot;</span><span class="p">:</span> <span class="p">{</span>    <span class="err">//玩家进服</span>
+        <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="err">//是否开启玩家进服时的群消息提示</span>
+        <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 加入了服务器&quot;</span>     <span class="err">//玩家离服时的提示文本</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;player_left&quot;</span><span class="p">:</span> <span class="p">{</span>    <span class="err">//玩家离服</span>
+        <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="err">//是否开启玩家离服时的群消息提示</span>
+        <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 离开了服务器&quot;</span>     <span class="err">//玩家离服时的提示文本</span>
+    <span class="p">},</span>
     <span class="nt">&quot;player_die&quot;</span><span class="p">:</span> <span class="p">{</span>     <span class="err">//玩家死亡事件</span>
-        <span class="nt">&quot;cause_by_mobs&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 被 {mob} 杀死了&quot;</span><span class="p">,</span> <span class="err">//玩家被生物击杀时</span>
-        <span class="nt">&quot;cause_unknown&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 啪唧一下死掉了&quot;</span>  <span class="err">//玩家因未知原因死亡时</span>
-    <span class="p">}</span>
+        <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="err">//是否开启玩家在服内死亡时的群消息提示</span>
+        <span class="nt">&quot;cause_by_mobs&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 被 {mob} 杀死了&quot;</span><span class="p">,</span> <span class="err">//玩家在服内被生物杀死时的提示文本</span>
+        <span class="nt">&quot;cause_unknown&quot;</span><span class="p">:</span> <span class="s2">&quot;玩家 {player} 啪唧一下死掉了&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;player_chat&quot;</span><span class="p">:</span> <span class="p">{</span>    <span class="err">//群服聊天转发</span>
+        <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="err">//是否启用群服聊天转发</span>
+        <span class="nt">&quot;toServer&quot;</span><span class="p">:</span> <span class="s2">&quot;§b[{group_name}] §a&lt;{sender}&gt; {content}&quot;</span><span class="p">,</span>  <span class="err">//群消息转发到服务器的文本格式</span>
+        <span class="nt">&quot;toGroup&quot;</span><span class="p">:</span> <span class="s2">&quot;[{server_name}] &lt;{player}&gt;\n{content}&quot;</span>  <span class="err">//服务器聊天消息转发到群的文本格式</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;whitelist_helper&quot;</span><span class="p">:</span> <span class="p">{</span>   <span class="err">//白名单助手</span>
+        <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="err">//是否启用白名单助手功能</span>
+        <span class="nt">&quot;member_left_with_bind&quot;</span><span class="p">:</span> <span class="s2">&quot;{player}（QQ:{member_qqid}）退出了群聊，正撤销其所有绑定&quot;</span><span class="p">,</span>    <span class="err">//玩家退群时的提示文本</span>
+        <span class="nt">&quot;member_not_bind&quot;</span><span class="p">:</span> <span class="s2">&quot;未查询到相关绑定信息！&quot;</span><span class="p">,</span>   <span class="err">//玩家未绑定时的提示文本</span>
+        <span class="nt">&quot;member_already_bind&quot;</span><span class="p">:</span> <span class="s2">&quot;你已经绑定过了！&quot;</span><span class="p">,</span>      <span class="err">//玩家已绑定时的提示文本</span>
+        <span class="nt">&quot;xboxid_already_bind&quot;</span><span class="p">:</span> <span class="s2">&quot;该Xbox ID已被 {bad_qqid} 绑定，请联系管理员解决&quot;</span><span class="p">,</span> <span class="err">//玩家XBox</span> <span class="err">ID和其他人冲突时的提示文本</span>
+        <span class="nt">&quot;member_already_add&quot;</span><span class="p">:</span> <span class="s2">&quot;该玩家已经添加过白名单了！&quot;</span>   <span class="err">//玩家已加过白名单时的提示文本</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;runcmd_nofication&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="err">//是否开启指令执行反馈（在群内返回指令执行结果）</span>
+    <span class="nt">&quot;player_not_admin&quot;</span><span class="p">:</span> <span class="s2">&quot;您不是管理员，无权执行该操作！&quot;</span><span class="p">,</span>  <span class="err">//玩家无权操作时的提示文本</span>
+    <span class="nt">&quot;member_left&quot;</span><span class="p">:</span> <span class="s2">&quot;成员 {player} 退出了群聊&quot;</span><span class="p">,</span>     <span class="err">//玩家退出群聊（未绑定）时的提示文本</span>
+    <span class="nt">&quot;server_connect_failed&quot;</span><span class="p">:</span> <span class="s2">&quot;服务器未开启或连接中断，请稍后重试！&quot;</span>       <span class="err">//服务器连接中断时的提示文本（仅在执行指令、增删白名单时出现）</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <table>
@@ -913,6 +940,26 @@
 <tr>
 <td>{player}</td>
 <td>玩家Xbox ID</td>
+</tr>
+<tr>
+<td>{group_name}</td>
+<td>群名称</td>
+</tr>
+<tr>
+<td>{server_name}</td>
+<td>服务器名称</td>
+</tr>
+<tr>
+<td>{sender}</td>
+<td>群消息发送者的昵称（群昵称）</td>
+</tr>
+<tr>
+<td>{member_qqid}</td>
+<td>玩家（成员）的QQ号码</td>
+</tr>
+<tr>
+<td>{bad_qqid}</td>
+<td>与本人Xbox ID冲突的已绑定QQ号码</td>
 </tr>
 <tr>
 <td>{mob}</td>
@@ -1009,7 +1056,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "seach.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>
