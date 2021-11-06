@@ -16,9 +16,9 @@ Meet capable server owners or developers for custom robot development
 
 ## 项目状态
 
-### 核心组件
+### 项目简介
 
-|项目|使用语言|状态|
+|项目|开发语言|状态|
 |--|--|--|
 |XBridge-Nodejs|Node.js|<font color="DarkSeaGreen">已完工</font>|
 |XBridge-CSharp|C#|<font color="DarkSeaGreen">已完工</font>|
@@ -27,10 +27,10 @@ Meet capable server owners or developers for custom robot development
 
 ### 机器人适配
 
-|项目|使用项目|机器人框架|
+|机器人名称|采用项目|机器人框架|
 |--|--|--|
 |XBridgeR|XBridge-CSharp|[Mirai](https://github.com/mamoe/mirai)|
-|XBridgeN|XBridge-Nodejs|[QICO](https://github.com/takayama-lily/oicq)|
+|XBridgeN|XBridge-Nodejs|[OICQ](https://github.com/takayama-lily/oicq)|
 |XBridgeA|XBridge-Lua|[ColorMirai](https://github.com/Coloryr/ColorMirai)|
 
 

@@ -1,5 +1,7 @@
 # XBridgeN：一般配置
-当检测到配置文件不存在时，XBridgeN会自动生成配置文件。以下配置文件均支持热修改（修改完成后无需重启程序即可生效）
+当XBridgeN检测到配置文件不存在时，会自动生成配置文件（需要注意的是，每当XBridgeN有版本更新时，请留意XBridgeN的更新说明有没有涉及到配置文件变动）。
+
+配置文件支持热修改，修改保存后无需重启程序即可生效。
 
 ## 生物实体数据
 `./config/mobs.json` - 用于保存实体（玩家、生物）命名。
@@ -26,9 +28,9 @@
 示例配置：
 ```json
 {
-	"black_be": {	//云黑功能
-		"join_group_detection": true,	//是否启用加群云黑检测
-		"autonomous_check": true		//是否启用自助云黑查询
+	"join_group_detection": {	//加群云黑检测功能
+		"enable": true,	//是否启用加群云黑检测
+		"request_auto_process": true	//加群云黑检测后是否自动处理加群请求
 	},
 	"player_join": {	//玩家进服
 		"enable": true,		//是否开启玩家进服时的群消息提示

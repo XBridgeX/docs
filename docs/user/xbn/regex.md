@@ -5,7 +5,18 @@
 文件位置|说明
 --|--
 `/config/regex.json`|配置群消息自动应答规则。
+</br>
 
+* 正则表达式还支持以下占位符（部分正则可用）：
+
+占位符|说明
+---|---
+{player}|已绑定玩家的Xbox ID
+{cpu_usage}|CPU使用率
+{mem_usage_present}|内存使用率（以百分比形式显示）
+{mem_usage_size}|内存使用率（以容量形式显示）
+{sys_uptime}|系统已运行时间
+</br>
 
 一个正则表达式配置文件的基本结构包括 **regex（正则体）**、**permission（所需执行权限）**、**actions（动作组）**。而**actions**内可以包含一个或多个动作，每个动作的基本结构为**type（动作类型）**和**content（动作内容）**。当玩家在群内发送消息时，如果发送的文本和正则表达式中配置中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的动作组。动作可以是执行指令，也可以是群内发送消息。下面将会针对默认的正则表达式配置进行详细介绍。
 
@@ -26,6 +37,20 @@
 ```
 
 ![06](../../img/xbn/runcmd.png)
+
+* 预定指令目前还支持玩家占位符，用于实现一些特定功能，例如：
+```json
+{
+	"regex": "^自杀$",
+	"permission": 0,
+	"actions": [
+		{
+			"type": "runcmd",
+			"content": "kill {player}"
+		}
+	]
+}
+```
 
 ---
 ### 执行自定义指令（以“whitelist reload”为例）
@@ -78,19 +103,13 @@
 	"actions": [
 		{
 			"type": "sys_info",
-			"content": "服务器状态\nCPU使用：{cpu_usage}\n内存使用：{mem_usage}\n已运行时间：{sys_uptime}"
+			"content": "服务器状态\nCPU使用：{cpu_usage}\n内存使用：{mem_usage}\n磁盘空间使用：{disk_usage}\n已运行时间：{sys_uptime}"
 		}
 	]
 }
 ```
 ![09](../../img/xbn/sysinfo.png)
 
-占位符|说明
----|---
-{cpu_usage}|CPU使用率
-{mem_usage_present}|内存使用率（以百分比形式显示）
-{mem_usage_size}|内存使用率（以容量形式显示）
-{sys_uptime}|系统已运行时间
 
 **Tips**：这里查询的是XBridgeN所在服务器的状态。如果需要查询BDS服务器的状态，建议将XBridgeN与BDS部署在同一台主机上。
 
@@ -104,13 +123,33 @@
 	"actions": [	//动作组
 		{
 			"type": "bind_whitelist",	//动作模式
-			"content": "白名单申请已发送，请等待管理员审核！"	//动作内容，一般为动作执行后的群消息提示
+			"content": "您的Xbox ID“{player}”已绑定，请等待管理员开通白名单！"
+			/* ↑ 动作内容，一般为动作执行后的群消息提示*/
 		}
 	]
 }
 ```
 
 ![00](../../img/xbn/bind_whitelist.png)
+
+---
+
+### 自助添加白名单
+```json
+{
+	"regex": "^我要白名单$",
+	"permission": 0,
+	"actions": [
+		{
+			"type": "add_whitelist_self",
+			"content": "您的Xbox ID“{player}”已添加到服务器白名单！"
+		}
+	]
+}
+```
+![14](../../img/xbn/i_whitelist.png)
+
+需要注意的是，玩家需要先绑定Xbox ID，然后才能使用自助添加白名单。
 
 ---
 ### 自助解绑白名单
@@ -158,7 +197,7 @@
 	"actions": [
 		{
 			"type": "add_whitelist",
-			"content": "已将该玩家添加到所有服务器的白名单!"
+			"content": "已将“{player}”添加到所有服务器的白名单!"
 		}
 	]
 }
@@ -176,7 +215,7 @@
 	"actions": [
 		{
 			"type": "del_whitelist",
-			"content": "已将该玩家从所有服务器的白名单中移除!"
+			"content": "已将“{player}”从所有服务器的白名单中移除!"
 		}
 	]
 }
