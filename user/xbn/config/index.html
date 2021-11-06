@@ -875,7 +875,8 @@
                 
                 
                 <h1 id="xbridgen">XBridgeN：一般配置</h1>
-<p>当检测到配置文件不存在时，XBridgeN会自动生成配置文件。以下配置文件均支持热修改（修改完成后无需重启程序即可生效）</p>
+<p>当XBridgeN检测到配置文件不存在时，会自动生成配置文件（需要注意的是，每当XBridgeN有版本更新时，请留意XBridgeN的更新说明有没有涉及到配置文件变动）。</p>
+<p>配置文件支持热修改，修改保存后无需重启程序即可生效。</p>
 <h2 id="_1">生物实体数据</h2>
 <p><code>./config/mobs.json</code> - 用于保存实体（玩家、生物）命名。
 当玩家/生物被杀时，会通过该文件的内容将死亡事件转发到群内</p>
@@ -893,9 +894,9 @@
 <p><code>./config/players_event.json</code> - 配置群服联动功能。</p>
 <p>示例配置：
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;black_be&quot;</span><span class="p">:</span> <span class="p">{</span>   <span class="err">//云黑功能</span>
-        <span class="nt">&quot;join_group_detection&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>   <span class="err">//是否启用加群云黑检测</span>
-        <span class="nt">&quot;autonomous_check&quot;</span><span class="p">:</span> <span class="kc">true</span>        <span class="err">//是否启用自助云黑查询</span>
+    <span class="nt">&quot;join_group_detection&quot;</span><span class="p">:</span> <span class="p">{</span>   <span class="err">//加群云黑检测功能</span>
+        <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="err">//是否启用加群云黑检测</span>
+        <span class="nt">&quot;request_auto_process&quot;</span><span class="p">:</span> <span class="kc">true</span>    <span class="err">//加群云黑检测后是否自动处理加群请求</span>
     <span class="p">},</span>
     <span class="nt">&quot;player_join&quot;</span><span class="p">:</span> <span class="p">{</span>    <span class="err">//玩家进服</span>
         <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="err">//是否开启玩家进服时的群消息提示</span>

@@ -520,34 +520,41 @@
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    自助解绑白名单
+    自助添加白名单
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    查询本人绑定状态
+    自助解绑白名单
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    为目标玩家添加白名单
+    查询本人绑定状态
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    删除目标玩家的白名单
+    为目标玩家添加白名单
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
+    删除目标玩家的白名单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
     查询目标玩家的绑定状态
   </a>
   
@@ -561,7 +568,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     群消息（以“帮助”为例）
   </a>
   
@@ -947,34 +954,41 @@
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    自助解绑白名单
+    自助添加白名单
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    查询本人绑定状态
+    自助解绑白名单
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    为目标玩家添加白名单
+    查询本人绑定状态
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    删除目标玩家的白名单
+    为目标玩家添加白名单
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
+    删除目标玩家的白名单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
     查询目标玩家的绑定状态
   </a>
   
@@ -988,7 +1002,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     群消息（以“帮助”为例）
   </a>
   
@@ -1027,6 +1041,47 @@
 <td><code>/config/regex.json</code></td>
 <td>配置群消息自动应答规则。</td>
 </tr>
+<tr>
+<td></br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>正则表达式还支持以下占位符（部分正则可用）：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>占位符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{player}</td>
+<td>已绑定玩家的Xbox ID</td>
+</tr>
+<tr>
+<td>{cpu_usage}</td>
+<td>CPU使用率</td>
+</tr>
+<tr>
+<td>{mem_usage_present}</td>
+<td>内存使用率（以百分比形式显示）</td>
+</tr>
+<tr>
+<td>{mem_usage_size}</td>
+<td>内存使用率（以容量形式显示）</td>
+</tr>
+<tr>
+<td>{sys_uptime}</td>
+<td>系统已运行时间</td>
+</tr>
+<tr>
+<td></br></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <p>一个正则表达式配置文件的基本结构包括 <strong>regex（正则体）</strong>、<strong>permission（所需执行权限）</strong>、<strong>actions（动作组）</strong>。而<strong>actions</strong>内可以包含一个或多个动作，每个动作的基本结构为<strong>type（动作类型）</strong>和<strong>content（动作内容）</strong>。当玩家在群内发送消息时，如果发送的文本和正则表达式中配置中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的动作组。动作可以是执行指令，也可以是群内发送消息。下面将会针对默认的正则表达式配置进行详细介绍。</p>
@@ -1044,6 +1099,20 @@
 <span class="p">}</span>
 </code></pre></div>
 <p><img alt="06" src="../../../img/xbn/runcmd.png" /></p>
+<ul>
+<li>预定指令目前还支持玩家占位符，用于实现一些特定功能，例如：
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^自杀$&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;runcmd&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;kill {player}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
 <hr />
 <h3 id="whitelist-reload">执行自定义指令（以“whitelist reload”为例）</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1083,38 +1152,12 @@
     <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sys_info&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;服务器状态\nCPU使用：{cpu_usage}\n内存使用：{mem_usage}\n已运行时间：{sys_uptime}&quot;</span>
+            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;服务器状态\nCPU使用：{cpu_usage}\n内存使用：{mem_usage}\n磁盘空间使用：{disk_usage}\n已运行时间：{sys_uptime}&quot;</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 <img alt="09" src="../../../img/xbn/sysinfo.png" /></p>
-<table>
-<thead>
-<tr>
-<th>占位符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>{cpu_usage}</td>
-<td>CPU使用率</td>
-</tr>
-<tr>
-<td>{mem_usage_present}</td>
-<td>内存使用率（以百分比形式显示）</td>
-</tr>
-<tr>
-<td>{mem_usage_size}</td>
-<td>内存使用率（以容量形式显示）</td>
-</tr>
-<tr>
-<td>{sys_uptime}</td>
-<td>系统已运行时间</td>
-</tr>
-</tbody>
-</table>
 <p><strong>Tips</strong>：这里查询的是XBridgeN所在服务器的状态。如果需要查询BDS服务器的状态，建议将XBridgeN与BDS部署在同一台主机上。</p>
 <hr />
 <h3 id="_5">自助绑定白名单</h3>
@@ -1124,14 +1167,30 @@
     <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>    <span class="err">//动作组</span>
         <span class="p">{</span>
             <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;bind_whitelist&quot;</span><span class="p">,</span>   <span class="err">//动作模式</span>
-            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;白名单申请已发送，请等待管理员审核！&quot;</span> <span class="err">//动作内容，一般为动作执行后的群消息提示</span>
+            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;您的Xbox ID“{player}”已绑定，请等待管理员开通白名单！&quot;</span>
+            <span class="err">/*</span> <span class="err">↑</span> <span class="err">动作内容，一般为动作执行后的群消息提示*/</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><img alt="00" src="../../../img/xbn/bind_whitelist.png" /></p>
 <hr />
-<h3 id="_6">自助解绑白名单</h3>
+<h3 id="_6">自助添加白名单</h3>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^我要白名单$&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;add_whitelist_self&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;您的Xbox ID“{player}”已添加到服务器白名单！&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<img alt="14" src="../../../img/xbn/i_whitelist.png" /></p>
+<p>需要注意的是，玩家需要先绑定Xbox ID，然后才能使用自助添加白名单。</p>
+<hr />
+<h3 id="_7">自助解绑白名单</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^解绑$&quot;</span><span class="p">,</span>
     <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -1145,7 +1204,7 @@
 </code></pre></div>
 <p><img alt="01" src="../../../img/xbn/unbind_whitelist.png" /></p>
 <hr />
-<h3 id="_7">查询本人绑定状态</h3>
+<h3 id="_8">查询本人绑定状态</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^我的绑定$&quot;</span><span class="p">,</span>
     <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -1159,35 +1218,35 @@
 </code></pre></div>
 <p><img alt="02" src="../../../img/xbn/check_bind_self.png" /></p>
 <hr />
-<h3 id="_8">为目标玩家添加白名单</h3>
+<h3 id="_9">为目标玩家添加白名单</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^加白名单 (.+$)&quot;</span><span class="p">,</span>
     <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;add_whitelist&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;已将该玩家添加到所有服务器的白名单!&quot;</span>
+            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;已将“{player}”添加到所有服务器的白名单!&quot;</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><img alt="03" src="../../../img/xbn/add_whitelist.png" /></p>
 <hr />
-<h3 id="_9">删除目标玩家的白名单</h3>
+<h3 id="_10">删除目标玩家的白名单</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^删白名单 (.+$)&quot;</span><span class="p">,</span>
     <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;del_whitelist&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;已将该玩家从所有服务器的白名单中移除!&quot;</span>
+            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;已将“{player}”从所有服务器的白名单中移除!&quot;</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><img alt="04" src="../../../img/xbn/del_whitelist.png" /></p>
 <hr />
-<h3 id="_10">查询目标玩家的绑定状态</h3>
+<h3 id="_11">查询目标玩家的绑定状态</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^查绑定 (.+$)&quot;</span><span class="p">,</span>
     <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -1217,7 +1276,7 @@
 </code></pre></div>
 <p><img alt="07" src="../../../img/xbn/http_get.png" /></p>
 <hr />
-<h3 id="_11">群消息（以“帮助”为例）</h3>
+<h3 id="_12">群消息（以“帮助”为例）</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^帮助$&quot;</span><span class="p">,</span>
     <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
