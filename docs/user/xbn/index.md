@@ -6,7 +6,7 @@
 
 WebSocket服务器|类型|项目状态
 --|--|--
-[KWO](https://github.com/XBridgeX/KWO)|BDS启动器软件|活动，开发中
+[Nillauncher](https://github.com/XBridgeX/nillauncher)|BDS启动器软件|活动，开发中
 [LLWebSocket（原BDXWebSocket）](https://www.minebbs.com/resources/c-bdx-liteloader-bdswebsocketapi.2150/)|BDS端基于LiteLoader平台的插件|活动
 XWebSocket|BDS端基于CSR平台的插件|停更，已转向KWO
 

@@ -6,11 +6,11 @@
 
 ## 装载
 
-⚠️ 装载XBridgeR之前，请确保您装载了LLwebsoket，若未装载请您移步[装载LLWS](../../LLWS/install.md)
+⚠️ 装载XBridgeR之前，请确保您装载了LLWebsoket，若未装载请您移步[装载LLWS](../llws/install.md)
 
 1.下载XBridge
 
-可以在[minebbs](https://www.minebbs.com/resources/xbridge.2761/)或者[XBX官方QQ群](https://jq.qq.com/?_wv=1027&k=rmCKLG7M)中下载文件
+可以在[minebbs](https://www.minebbs.com/resources/xbridger.2761/)或者[XBX官方QQ群](https://jq.qq.com/?_wv=1027&k=rmCKLG7M)中下载文件
 
 下载后解压，如图所示
 
@@ -20,7 +20,7 @@
 
 2.下载Mirai
 
-可以在[XBX官方QQ群](https://jq.qq.com/?_wv=1027&k=rmCKLG7M)中下载文件
+可以在[minebbs](https://www.minebbs.com/resources/mcl-xbridger.3093/)或者[XBX官方QQ群](https://jq.qq.com/?_wv=1027&k=rmCKLG7M)中下载文件
 
 下载后解压，如图所示
 

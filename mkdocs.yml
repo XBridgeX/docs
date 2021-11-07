@@ -2,13 +2,6 @@ site_name: XBridgeX
 copyright: Copyright &copy; 2020 - 2021 XBridgeX
 nav:
     - HOME: index.md
-    - KWO: 
-      - 概述: KWO/index.md
-      - 配置文件: KWO/config.md
-      - 数据包: KWO/pack.md
-    - LLWS:
-      - 安装: LLWS/install.md
-      - 数据包: LLWS/pack.md
     - 用户手册:
       - 主页: user/index.md
       - XBridgeN:
@@ -25,12 +18,18 @@ nav:
         - 正则表达式: user/xbr/regex.md
         - websocket开发: user/xbr/wss.md
         - 常见问题: user/xbr/QandA.md
-      - MSB:
-        - 占位符: user/MSB/place_holder.md
+      - LLWebsocketR:
+        - 安装: user/llws/install.md
+      - Nillauncher:
+        - 概述: user/nil/index.md
+        - 启动参数: user/nil/start_arg.md
     - 开发手册:
       - 安装: dev/install.md
       - 搭建开发环境: dev/enviroment.md
       - 通信加密: dev/encrypt.md
+      - 数据包: 
+        - LLWebsocketR: dev/packs/llws.md
+        - Nillauncher: dev/packs/nillauncher.md
     - 关于: about.md
 theme:
     name: material

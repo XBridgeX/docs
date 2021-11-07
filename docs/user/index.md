@@ -7,3 +7,7 @@
  - [XBridgeN](./xbn)
 
  - [XBridgeR](./xbr)
+
+ - [LLWebsocketR](./llws/install.md)
+
+ - [Nillauncher](./nil/index.md)

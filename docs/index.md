@@ -8,15 +8,11 @@ XbridgeX项目旨在让多种语言与LLWebsocket或KWO进行交互
 
 满足有能力的服主或者开发者进行自定义机器人开发
 
-
-The XbridgeX project aims to allow multiple languages to interact with LLWebsocket or KWO
-
-Meet capable server owners or developers for custom robot development
-
+***
 
 ## 项目状态
 
-### 项目简介
+### 核心组件
 
 |项目|开发语言|状态|
 |--|--|--|
@@ -33,13 +29,12 @@ Meet capable server owners or developers for custom robot development
 |XBridgeN|XBridge-Nodejs|[OICQ](https://github.com/takayama-lily/oicq)|
 |XBridgeA|XBridge-Lua|[ColorMirai](https://github.com/Coloryr/ColorMirai)|
 
+***
 
 ## 快速导航
 
-- [KWO文档](./KWO/pack.md)
-
-- [LLWS文档](./LLWS/pack.md)
-
 - [用户手册](./user/index.md)
+
+- [开发手册](./dev/install.md)
 
 - [关于](./about.md)

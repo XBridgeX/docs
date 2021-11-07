@@ -1,9 +1,9 @@
 # <center>标准数据包</center> 
-<center>KWO采用websocket进行通讯，本页面会介绍通讯使用的标准数据包</center>
+<center>nillauncher采用websocket进行通讯，本页面会介绍通讯使用的标准数据包</center>
 
 ***
 
-## <center>📤 KWO发出的数据包</center>
+## <center>📤 Nillauncher发出的数据包</center>
 
 ***
 
@@ -69,7 +69,7 @@
 ``` json
 {
     "type":"pack",
-    "cause":"start",
+    "cause":"server_start",
     "params":{}
 }
 ```
@@ -81,7 +81,7 @@
 ``` json
 {
     "type":"pack",
-    "cause":"stop",
+    "cause":"server_stop",
     "params":{}
 }
 ```
@@ -123,7 +123,7 @@
 }
 ```
 
-## <center>📥 KWO可接收的数据包</center>
+## <center>📥 Nillauncher可接收的数据包</center>
 
 ***
 
@@ -158,8 +158,10 @@
 ```json
 {
     "type":"pack",
-    "action":"start",
-    "params":{}
+    "action":"startrequest",
+    "params":{
+        "id":"xxxx-xxxxxxxx-xxxxxxxxx-xxxxxxxx"
+    }
 }
 ```
 
@@ -168,7 +170,25 @@
 ```json
 {
     "type":"pack",
-    "action":"stop",
-    "params":{}
+    "action":"stoprequest",
+    "params":{
+        "id":"xxxx-xxxxxxxx-xxxxxxxxx-xxxxxxxx"
+    }
 }
 ```
+
+此数据包等同于向服务器执行stop命令
+
+### 强制结束服务器进程
+
+```json
+{
+    "type":"pack",
+    "action":"serverkill_request",
+    "params":{
+        "id":"xxxx-xxxxxxxx-xxxxxxxxx-xxxxxxxx"
+    }
+}
+```
+
+非必要条件不推荐使用

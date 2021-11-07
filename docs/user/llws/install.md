@@ -10,7 +10,7 @@
 
 下载后解压，如图所示
 
-![](../img/llws_install_1.png)
+![](../../img/llws/install_1.png)
 
 2.装载
 
@@ -21,7 +21,7 @@
 ``` json
 {
 	"wsaddr":"0.0.0.0:8123",  //websocket服务器地址
-	"endpoint":"/mc",   //websocket服务器endport
+	"endport":"/mc",   //websocket服务器endport
 	"encrypt":"aes_cbc_pck7padding",   //加密模式
 	"wspasswd":"passwd",  //websocket密匙
 	"enableLog": false   //是否显示调试信息
