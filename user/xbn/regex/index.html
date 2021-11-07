@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -353,6 +353,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#nillauncher" class="md-nav__link">
+    开服（仅支持Nillauncher）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#whitelist-reload" class="md-nav__link">
     执行自定义指令（以“whitelist reload”为例）
   </a>
@@ -361,7 +368,7 @@
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    云黑自主查询
+    云黑自助查询
   </a>
   
 </li>
@@ -423,8 +430,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#http-get" class="md-nav__link">
-    发起异步http GET请求（以“百度”为例）
+  <a href="#httphttps-get" class="md-nav__link">
+    发起异步http/https GET请求（以“百度”为例）
   </a>
   
 </li>
@@ -909,6 +916,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#nillauncher" class="md-nav__link">
+    开服（仅支持Nillauncher）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#whitelist-reload" class="md-nav__link">
     执行自定义指令（以“whitelist reload”为例）
   </a>
@@ -917,7 +931,7 @@
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    云黑自主查询
+    云黑自助查询
   </a>
   
 </li>
@@ -979,8 +993,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#http-get" class="md-nav__link">
-    发起异步http GET请求（以“百度”为例）
+  <a href="#httphttps-get" class="md-nav__link">
+    发起异步http/https GET请求（以“百度”为例）
   </a>
   
 </li>
@@ -1051,23 +1065,20 @@
 <td>CPU使用率</td>
 </tr>
 <tr>
-<td>{mem_usage_present}</td>
-<td>内存使用率（以百分比形式显示）</td>
+<td>{mem_usage}</td>
+<td>内存使用率</td>
 </tr>
 <tr>
-<td>{mem_usage_size}</td>
-<td>内存使用率（以容量形式显示）</td>
+<td>{disk_usage}</td>
+<td>磁盘空间使用率</td>
 </tr>
 <tr>
 <td>{sys_uptime}</td>
 <td>系统已运行时间</td>
 </tr>
-<tr>
-<td></br></td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<p></br></p>
 <p>一个正则表达式配置文件的基本结构包括 <strong>regex（正则体）</strong>、<strong>permission（所需执行权限）</strong>、<strong>actions（动作组）</strong>。而<strong>actions</strong>内可以包含一个或多个动作，每个动作的基本结构为<strong>type（动作类型）</strong>和<strong>content（动作内容）</strong>。当玩家在群内发送消息时，如果发送的文本和正则表达式中配置中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的动作组。动作可以是执行指令，也可以是群内发送消息。下面将会针对默认的正则表达式配置进行详细介绍。</p>
 <hr />
 <h3 id="_2">执行预定指令（以“查服”为例）</h3>
@@ -1095,8 +1106,23 @@
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
-</code></pre></div></li>
+</code></pre></div>
+<img alt="0d6" src="../../../img/xbn/kill.png" /></li>
 </ul>
+<hr />
+<h3 id="nillauncher">开服（仅支持Nillauncher）</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^开服$&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;server_start_nl&quot;</span><span class="p">,</span>      <span class="err">//仅Nillau</span><span class="kc">n</span><span class="err">cher可用</span>
+            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><img alt="0i6" src="../../../img/xbn/server-start.png" /></p>
 <hr />
 <h3 id="whitelist-reload">执行自定义指令（以“whitelist reload”为例）</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1112,7 +1138,7 @@
 </code></pre></div>
 <p><img alt="01" src="../../../img/xbn/cmdraw.png" /></p>
 <hr />
-<h3 id="_3">云黑自主查询</h3>
+<h3 id="_3">云黑自助查询</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^查云黑 (xboxid|qq) (.+)$&quot;</span><span class="p">,</span>  <span class="err">//正则中的(xboxid|qq)部分为查询类型，切勿修改其内容和位置</span>
     <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -1142,7 +1168,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <img alt="09" src="../../../img/xbn/sysinfo.png" /></p>
-<p><strong>Tips</strong>：这里查询的是XBridgeN所在服务器的状态。如果需要查询BDS服务器的状态，建议将XBridgeN与BDS部署在同一台主机上。</p>
+<p><strong>Tips</strong>：这里查询的是XBridgeN所在服务器的状态。为了令查询结果更具参考价值，建议将XBridgeN与BDS部署在同一台主机上。</p>
 <hr />
 <h3 id="_5">自助绑定白名单</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1244,14 +1270,14 @@
 </code></pre></div>
 <p><img alt="05" src="../../../img/xbn/check_bind.png" /></p>
 <hr />
-<h3 id="http-get">发起异步http GET请求（以“百度”为例）</h3>
+<h3 id="httphttps-get">发起异步http/https GET请求（以“百度”为例）</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;regex&quot;</span><span class="p">:</span> <span class="s2">&quot;^百度$&quot;</span><span class="p">,</span>
     <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;http_get&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.baidu.com&quot;</span><span class="p">,</span>  <span class="err">//请求地址</span>
+            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.baidu.com&quot;</span><span class="p">,</span> <span class="err">//请求地址</span>
             <span class="nt">&quot;succeed&quot;</span><span class="p">:</span> <span class="s2">&quot;百度一下，你就知道&quot;</span><span class="p">,</span> <span class="err">//请求成功时发送的群消息内容</span>
             <span class="nt">&quot;failed&quot;</span><span class="p">:</span> <span class="s2">&quot;请求失败,请检查网路&quot;</span>      <span class="err">//请求失败时发送的群消息内容</span>
         <span class="p">}</span>
@@ -1259,6 +1285,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <p><img alt="07" src="../../../img/xbn/http_get.png" /></p>
+<p><strong>Tips</strong>：该项功能适用于对接MCSM等服务器面板，控制BDS的开启/关闭。</p>
 <hr />
 <h3 id="_12">群消息（以“帮助”为例）</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1348,7 +1375,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "seach.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>
