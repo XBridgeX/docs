@@ -832,6 +832,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    关闭服务器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    强制结束服务器进程
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1004,6 +1018,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    关闭服务器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    强制结束服务器进程
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1141,6 +1169,26 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="_14">关闭服务器</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="s2">&quot;stoprequest&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;xxxx-xxxxxxxx-xxxxxxxxx-xxxxxxxx&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>此数据包等同于向服务器执行stop命令</p>
+<h3 id="_15">强制结束服务器进程</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;pack&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="s2">&quot;serverkill_request&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;params&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;xxxx-xxxxxxxx-xxxxxxxxx-xxxxxxxx&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>非必要条件不推荐使用</p>
                 
               
               
