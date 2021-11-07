@@ -2,7 +2,7 @@
 ## 开始之前
 * 确保使用的是主流的操作系统平台（包括但不限于Windows、Linux、MacOS）；
 * 确保操作系统已安装Node.js环境（Node.js版本要求为14.x及以上）；
-* 确保BDS端已部署好**WebSocket服务器组件（LLWebSocket、XWebSocket或KWO）**。相关组件可前往 [XBridgeX交流群](https://jq.qq.com/?_wv=1027&k=rmCKLG7M) 获取。
+* 确保BDS端已部署好**WebSocket服务器组件（LLWebSocket、XWebSocket或Nillauncher）**。相关组件可前往 [XBridgeX交流群](https://jq.qq.com/?_wv=1027&k=rmCKLG7M) 获取。
 
 ## 初始配置与使用
 1. 安装 [Node.js](https://nodejs.org/)（要求Node.js版本为14.x及以上）；
@@ -25,7 +25,7 @@
 ```
 
 WebSocket服务器地址请参照以下格式进行填写：
-![01](../../img/xbn/ws-format.png)
+![014](../../img/xbn/ws-format.png)
 
 5. 全局配置修改完成并保存后，再次启动XBridgeN；
 6. 启动BDS。当XBridgeN控制台出现类似以下的提示时，说明XBridgeN配置无误且运行正常：
@@ -38,3 +38,5 @@ WS服务器连接成功！
 [2021-10-21T15:54:19.205] [MARK] [iPad:123456] - 加载了1个好友，1个群，1个陌生人。
 [2021-10-21T15:54:19.349] [MARK] [iPad:123456] - 初始化完毕，开始处理消息。
 ```
+
+**Tips**：从1.0.0_preview_1版本开始，每次启动XBridgeN时都会进行一次更新检查。如果检测到新版本，则会在控制台显示更新提要，提醒用户进行更新。

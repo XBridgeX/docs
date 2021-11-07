@@ -13,9 +13,10 @@
 ---|---
 {player}|已绑定玩家的Xbox ID
 {cpu_usage}|CPU使用率
-{mem_usage_present}|内存使用率（以百分比形式显示）
-{mem_usage_size}|内存使用率（以容量形式显示）
+{mem_usage}|内存使用率
+{disk_usage}|磁盘空间使用率
 {sys_uptime}|系统已运行时间
+
 </br>
 
 一个正则表达式配置文件的基本结构包括 **regex（正则体）**、**permission（所需执行权限）**、**actions（动作组）**。而**actions**内可以包含一个或多个动作，每个动作的基本结构为**type（动作类型）**和**content（动作内容）**。当玩家在群内发送消息时，如果发送的文本和正则表达式中配置中的关键词匹配，且玩家权限与该段关键词的所需权限匹配，即可触发相应的动作组。动作可以是执行指令，也可以是群内发送消息。下面将会针对默认的正则表达式配置进行详细介绍。
@@ -51,6 +52,25 @@
 	]
 }
 ```
+![0d6](../../img/xbn/kill.png)
+
+---
+### 开服（仅支持Nillauncher）
+
+```json
+{
+	"regex": "^开服$",
+	"permission": 0,
+	"actions": [
+		{
+			"type": "server_start_nl",		//仅Nillauncher可用
+			"content": ""
+		}
+	]
+}
+```
+
+![0i6](../../img/xbn/server-start.png)
 
 ---
 ### 执行自定义指令（以“whitelist reload”为例）
@@ -71,7 +91,7 @@
 ![01](../../img/xbn/cmdraw.png)
 
 ---
-### 云黑自主查询
+### 云黑自助查询
 
 ```json
 {
@@ -111,7 +131,7 @@
 ![09](../../img/xbn/sysinfo.png)
 
 
-**Tips**：这里查询的是XBridgeN所在服务器的状态。如果需要查询BDS服务器的状态，建议将XBridgeN与BDS部署在同一台主机上。
+**Tips**：这里查询的是XBridgeN所在服务器的状态。为了令查询结果更具参考价值，建议将XBridgeN与BDS部署在同一台主机上。
 
 ---
 ### 自助绑定白名单
@@ -242,7 +262,7 @@
 ![05](../../img/xbn/check_bind.png)
 
 ---
-### 发起异步http GET请求（以“百度”为例）
+### 发起异步http/https GET请求（以“百度”为例）
 
 ```json
 {
@@ -251,7 +271,7 @@
 	"actions": [
 		{
 			"type": "http_get",
-			"content": "http://www.baidu.com",	//请求地址
+			"content": "https://www.baidu.com",	//请求地址
 			"succeed": "百度一下，你就知道",	//请求成功时发送的群消息内容
 			"failed": "请求失败,请检查网路"		//请求失败时发送的群消息内容
 		}
@@ -260,6 +280,8 @@
 ```
 
 ![07](../../img/xbn/http_get.png)
+
+**Tips**：该项功能适用于对接MCSM等服务器面板，控制BDS的开启/关闭。
 
 ---
 ### 群消息（以“帮助”为例）

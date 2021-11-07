@@ -8,9 +8,10 @@ WebSocket服务器|类型|项目状态
 --|--|--
 [Nillauncher](https://github.com/XBridgeX/nillauncher)|BDS启动器软件|活动，开发中
 [LLWebSocket（原BDXWebSocket）](https://www.minebbs.com/resources/c-bdx-liteloader-bdswebsocketapi.2150/)|BDS端基于LiteLoader平台的插件|活动
-XWebSocket|BDS端基于CSR平台的插件|停更，已转向KWO
+XWebSocket|BDS端基于CSR平台的插件|停更，已转向Nillauncher
 
 **WebSocket服务器***：泛指能够实现WebSocket通信的组件。这些组件通常以插件或者软件的形式存在。
+
 <br><br>**阅读本文档，您将能够：**
 
 * 掌握XBridgeN的基本使用
