@@ -4,7 +4,7 @@
 
 ## 概述
 
-XbridgeX项目旨在让多种语言与LLWebsocket或KWO进行交互
+XbridgeX项目旨在让多种语言与LLWebsocket或Nillauncher进行交互
 
 满足有能力的服主或者开发者进行自定义机器人开发
 
